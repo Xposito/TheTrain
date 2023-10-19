@@ -1,0 +1,3 @@
+Las txturas de prototipo se pueden sacar de este link 
+https://wahooney.itch.io/texture-grid-generator
+Yo he usado el preset de valve y le he cambiado el nombre a Train
