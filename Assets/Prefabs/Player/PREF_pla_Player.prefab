@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3437307711662719875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.54999995, z: 0.58}
+  m_LocalPosition: {x: 0, y: 0.7, z: 0.58}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -213,7 +213,7 @@ Transform:
   m_GameObject: {fileID: 5011288918154570553}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1672760066594558452}
@@ -367,6 +367,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e127c9345020b947b9c5749c14a8ca5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canJump: 0
+  canRun: 0
   moveSpeed: 2
   sprintSpeed: 5
   maxStamina: 100
@@ -380,6 +382,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   orientation: {fileID: 18301435294312280}
+  playerHeight: 2.5
   jumpkey: 32
   sprintKey: 304
   grounded: 0

@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class SCR_pla_PlayerMovement : MonoBehaviour
 {
+    public bool canJump;
+    public bool canRun;
+
     [Header("Movimiento")]   
     public float moveSpeed; //Velocidad al andar
     public float sprintSpeed; //Velocidad al correr  
@@ -18,7 +21,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     private float stamina; //Estamina actual del player
 
 
-    [Header("Jump")] 
+    [Header("Salto")] 
     public float jumpForce;  //Fuerza de salto  
     public float jumpCoolDown; //Teimpo entre saltos
     public float airMultiplier; //Velocidad que se añade al jugador si está en el aire
@@ -30,7 +33,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     public LayerMask whatIsGround;  //Capa que se debe detectar como suelo
     public Transform orientation; //Transform para girar al personaje al girar la cámara (debe ser el body)
 
-    private float playerHeight = 2; //Altura del modelo (importante para el ground check)
+    public float playerHeight = 2; //Altura del modelo (importante para el ground check)
 
 
     [Header("Binds")]
@@ -85,14 +88,14 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(jumpkey) && readyToJump && grounded)
+        if (Input.GetKey(jumpkey) && readyToJump && grounded && canJump)
         {
             readyToJump = false;
             Jump();
             Invoke(nameof(ResetJump), jumpCoolDown); //Esto es para que salte el personaje de forma automática si mantienes apretado el botón de saltar
         }
 
-        if (Input.GetKeyDown(sprintKey) && grounded)
+        if (Input.GetKeyDown(sprintKey) && grounded && canRun)
         {
             if (rb.velocity != new Vector3(0, 0, 0) && stamina > 0)
             {
