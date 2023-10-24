@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class SCR_pla_CameraMovement : MonoBehaviour
 {
-    public float sensX; //Sensibilidad en X
-    public float sensY; //Sensibilidad en Y
+    public SCR_scr_Player_Options playerOptions;
+
+    private float sensX; //Sensibilidad en X
+    private float sensY; //Sensibilidad en Y
 
     public Transform body; //Modelo del personaje (cuerpo)
 
@@ -15,6 +17,7 @@ public class SCR_pla_CameraMovement : MonoBehaviour
 
     void Start()
     {
+        InitializePlayerOptions();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
@@ -30,5 +33,11 @@ public class SCR_pla_CameraMovement : MonoBehaviour
 
         transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         body.rotation = Quaternion.Euler(0, yRotation, 0);
+    }
+
+    void InitializePlayerOptions()
+    {
+        sensX = playerOptions.sensX;
+        sensY = playerOptions.sensY;
     }
 }

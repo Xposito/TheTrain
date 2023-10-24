@@ -6,40 +6,40 @@ using UnityEngine;
 
 public class SCR_pla_PlayerMovement : MonoBehaviour
 {
-    public bool canJump;
-    public bool canRun;
+    public SCR_scr_Player_Options playerOptions;
+    
+    #region Opciones del jugador
 
-    [Header("Movimiento")]   
-    public float moveSpeed; //Velocidad al andar
-    public float sprintSpeed; //Velocidad al correr  
-    public float maxStamina; //Estamina máxima  
-    public float staminaToLoose;  //Estamina que se pierde al correr  
-    public float staminaToRecover; //Estamina que se recupera al dejar de correr   
-    public float groundDrag; //Rozamiento con el suelo
- 
+    [Header("Movimiento")]
+    private float moveSpeed; //Velocidad al andar
+    private float sprintSpeed; //Velocidad al correr  
+    private float maxStamina; //Estamina máxima  
+    private float staminaToLoose;  //Estamina que se pierde al correr  
+    private float staminaToRecover; //Estamina que se recupera al dejar de correr   
+    private float groundDrag; //Rozamiento con el suelo
+
     private float speed; //Velocidad actual del player
     private float stamina; //Estamina actual del player
 
 
-    [Header("Salto")] 
-    public float jumpForce;  //Fuerza de salto  
-    public float jumpCoolDown; //Teimpo entre saltos
-    public float airMultiplier; //Velocidad que se añade al jugador si está en el aire
-
+    [Header("Salto")]
+    private float jumpForce;  //Fuerza de salto  
+    private float jumpCoolDown; //Teimpo entre saltos
+    private float airMultiplier; //Velocidad que se añade al jugador si está en el aire
     private bool readyToJump;
 
 
     [Header("Ajustes varios")]
-    public LayerMask whatIsGround;  //Capa que se debe detectar como suelo
-    public Transform orientation; //Transform para girar al personaje al girar la cámara (debe ser el body)
-
-    public float playerHeight = 2; //Altura del modelo (importante para el ground check)
-
+    private LayerMask whatIsGround;  //Capa que se debe detectar como suelo
+    private float playerHeight = 2; //Altura del modelo (importante para el ground check)
+    public bool canJump;
+    public bool canRun;
 
     [Header("Binds")]
-    public KeyCode jumpkey = KeyCode.Space; //Tecla para saltar
-    public KeyCode sprintKey = KeyCode.LeftShift; //Tecla para correr
+    private KeyCode jumpKey = KeyCode.Space; //Tecla para saltar
+    private KeyCode sprintKey = KeyCode.LeftShift; //Tecla para correr
 
+    private Transform orientation; //Transform para girar al personaje al girar la cámara (debe ser el body)
     [HideInInspector] public bool grounded;
     private float horizontalInput;
     private float verticalInput;
@@ -48,15 +48,20 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     private bool isRuning;
     private bool resting;
 
+    #endregion
+
 
     void Start()
     {
+        InitializePlayerOptions();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
         speed = moveSpeed;
         stamina = maxStamina;
         readyToJump = true;
+
+        orientation = transform.Find("Body");
     }
 
     private void Update()
@@ -66,6 +71,31 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         MovePlayer();  //Mueve al personaje  
         speedControl(); //Controla que no se pase de la velocidad establecida   
     }
+
+    #region Coger las opciones del scriptable
+    void InitializePlayerOptions()
+    {
+        moveSpeed = playerOptions.moveSpeed;
+        sprintSpeed = playerOptions.sprintSpeed;
+        maxStamina = playerOptions.maxStamina;
+        staminaToLoose = playerOptions.staminaToLoose;
+        staminaToRecover = playerOptions.staminaToRecover;
+        groundDrag = playerOptions.groundDrag;
+
+        jumpForce = playerOptions.jumpForce;
+        jumpCoolDown = playerOptions.jumpCoolDown;
+        airMultiplier = playerOptions.airMultiplier;
+
+        whatIsGround = playerOptions.whatIsGround;
+        playerHeight = playerOptions.playerHeight;
+
+        jumpKey = playerOptions.jumpKey;
+        sprintKey = playerOptions.sprintKey;
+
+        canJump = playerOptions.canJump;
+        canRun = playerOptions.canRun;
+    }
+    #endregion 
 
 
     private void CheckFloor()
@@ -88,7 +118,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKey(jumpkey) && readyToJump && grounded && canJump)
+        if (Input.GetKey(jumpKey) && readyToJump && grounded && canJump)
         {
             readyToJump = false;
             Jump();
