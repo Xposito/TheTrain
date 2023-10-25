@@ -48,4 +48,6 @@ public class SCR_scr_Player_Options : ScriptableObject
     public KeyCode sprintKey; //Tecla para correr
     public KeyCode pickKey; //Tecla para coger cosas
     #endregion
+
+    public bool usingCam;
 }
