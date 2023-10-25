@@ -34,3 +34,4 @@ MonoBehaviour:
   jumpKey: 32
   sprintKey: 304
   pickKey: 102
+  usingCam: 0
