@@ -4,53 +4,42 @@ using UnityEngine;
 
 public class SCR_cam_takePhoto : MonoBehaviour
 {
-    //[SerializeField] private GameObject cubo;
-    //private Renderer renderCubo;
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    renderCubo = cubo.GetComponent<Renderer>();
-    //}
 
-    //IEnumerator RecordFrame()
-    //{
-    //    yield return new WaitForEndOfFrame();
-    //    var texture = ScreenCapture.CaptureScreenshotAsTexture();
-
-    //    renderCubo.material.mainTexture = texture;
-    //    // do something with texture
-
-    //    //// cleanup
-    //    //Object.Destroy(texture);
-    //}
-
-    //public void LateUpdate()
-    //{
-    //    if (Input.GetMouseButtonDown(0))
-    //    {
-    //        StartCoroutine(RecordFrame());
-    //    }
-
-
-    //}
+    
+    //Variables  del Raycast
+    [Header("Variables Raycast")]
     bool m_Started;
     public LayerMask m_LayerMask;
     [SerializeField] float m_scale = 1;
     [SerializeField] float m_long = 1;
     [SerializeField] float m_distance = 1;
 
+    //Variables para las fotos
+    [Header("Variables Fotos")]
+    [SerializeField] private Renderer[] renderCubo;
+
     void Start()
     {
         //Use this to ensure that the Gizmos are being drawn when in Play Mode.
         m_Started = true;
+
+      
     }
 
     void FixedUpdate()
     {
         MyCollisions();
     }
+    public void LateUpdate()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(RecordFrame());
+        }
+    }
 
-    void MyCollisions()
+
+            void MyCollisions()
     {
         //Use the OverlapBox to detect if there are any other colliders within this box area.
         //Use the GameObject's centre, half the size (as a radius) and rotation. This creates an invisible box around your GameObject.
@@ -74,5 +63,17 @@ public class SCR_cam_takePhoto : MonoBehaviour
         if (m_Started)
             //Draw a cube where the OverlapBox is (positioned where your GameObject is as well as a size)
             Gizmos.DrawWireCube(gameObject.transform.position + new Vector3(0,0,0 + m_distance), new Vector3(1 ,1,1 * m_long) * m_scale);
+    }
+
+    IEnumerator RecordFrame()
+    {
+        yield return new WaitForEndOfFrame();
+        var texture = ScreenCapture.CaptureScreenshotAsTexture();
+
+        renderCubo[1].material.mainTexture = texture;
+        // do something with texture
+
+        //// cleanup
+        //Object.Destroy(texture);
     }
 }
