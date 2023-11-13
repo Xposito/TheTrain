@@ -13,9 +13,11 @@ Material:
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _HALFTONESHAPE_STRIPE
+  - _OUTLINE
   - _RECEIVE_SHADOWS_OFF
   - _TOON_SHADING_ON
   m_InvalidKeywords:
+  - _ENABLEDHAIRSPEC_ON
   - _OVERRIDESHADOWCOLOR_ON
   - _RECEIVESHADOWS_OFF
   m_LightmapFlags: 4
@@ -31,7 +33,7 @@ Material:
     m_TexEnvs:
     - _BaseMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 3.9, y: 2.56}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -79,11 +81,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _HatchingNoiseMap:
         m_Texture: {fileID: 2800000, guid: 29d5f9cfb7bc7524a8ab38a4ad0d17e3, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 3.9, y: 2.56}
+        m_Scale: {x: 5, y: 5}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
@@ -138,7 +140,7 @@ Material:
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DstBlend: 0
-    - _EnabledHairSpec: 0
+    - _EnabledHairSpec: 1
     - _EnvironmentReflections: 1
     - _FaceShadowMapEnabled: 0
     - _FaceShadowMapPow: 0.2
@@ -166,21 +168,21 @@ Material:
     - _HatchDiffuseOffset: 0.415
     - _HatchDrawStrength: 9.59
     - _HatchSmoothness: 0.01
-    - _HatchingDensity: 1.283
-    - _HatchingDiffuseOffset: 0.198
-    - _HatchingDrawStrength: 10.83
+    - _HatchingDensity: 0
+    - _HatchingDiffuseOffset: -1
+    - _HatchingDrawStrength: 1.78
     - _HatchingEnabled: 1
     - _HatchingRotation: 90
-    - _HatchingSmoothness: 0.01
+    - _HatchingSmoothness: 0.913
     - _LightContribution: 1
     - _LightFalloffSize: 1
     - _Metallic: 0.14
     - _NoiseScale: 3
     - _NoiseStrength: 0.31
     - _OcclusionStrength: 1
-    - _OutlineEnabled: 0
+    - _OutlineEnabled: 1
     - _OutlineMode: 0
-    - _OutlineWidth: 6.4
+    - _OutlineWidth: 15
     - _OverrideShadowColor: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
@@ -222,9 +224,9 @@ Material:
     - _HairSpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _HalfToneColor: {r: 0.099449664, g: 0, b: 0.20754719, a: 1}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HatchingColor: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 1}
+    - _HatchingColor: {r: 1, g: 1, b: 1, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OutlineDistancFade: {r: -25, g: 50, b: 0, a: 0}
+    - _OutlineDistancFade: {r: -200, g: 200, b: 0, a: 0}
     - _RimColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0.498}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
