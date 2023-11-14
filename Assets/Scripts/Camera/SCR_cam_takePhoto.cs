@@ -25,13 +25,14 @@ public class SCR_cam_takePhoto : MonoBehaviour
     public Collider[] collidersProps;
     Bounds[] collidersBounds;
     Bounds bound;
+    
 
 
     public SCR_scr_Player_Options playerOption;
 
     [SerializeField] private Renderer[] renderCubo;
-    private int elementos = 0;
-
+    public int elementos = 0;
+    public bool itsPhoto = false;
 
 
     void Start()
@@ -66,17 +67,25 @@ public class SCR_cam_takePhoto : MonoBehaviour
                 if (GeometryUtility.TestPlanesAABB(cameraFrustum, bound))
                 {
                     Debug.Log("detecto cubo");
-                    if (Input.GetMouseButtonDown(0))
-                    {
+                    itsPhoto = true;
+                    
+                }
+                else
+                {
+                    itsPhoto = false;
+                }
+            }
+            if (itsPhoto)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
 
-                        StartCoroutine(RecordFrame());
+                    StartCoroutine(RecordFrame());
 
-                    }
                 }
             }
             
-            
-            
+
         }
         //MyCollisions();
         
@@ -89,6 +98,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
         var texture = ScreenCapture.CaptureScreenshotAsTexture();
 
         renderCubo[elementos].material.mainTexture = texture;
+  
         elementos++;
 
         // do something with texture
