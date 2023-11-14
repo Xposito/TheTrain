@@ -80,8 +80,8 @@ Material:
         m_Scale: {x: 0.62, y: 0.03}
         m_Offset: {x: 0, y: 0}
     - _HatchingNoiseMap:
-        m_Texture: {fileID: 2800000, guid: 29d5f9cfb7bc7524a8ab38a4ad0d17e3, type: 3}
-        m_Scale: {x: 10, y: 10}
+        m_Texture: {fileID: 2800000, guid: 678d3c83d16337a4baef90ff131b8238, type: 3}
+        m_Scale: {x: 20, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
