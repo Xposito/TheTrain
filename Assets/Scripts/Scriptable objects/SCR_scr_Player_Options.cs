@@ -21,6 +21,7 @@ public class SCR_scr_Player_Options : ScriptableObject
     [Header("Movimiento")]
     public float moveSpeed; //Velocidad al andar
     public float sprintSpeed; //Velocidad al correr  
+    public float ladderSpeed; //Velocidad al subir escaleras
     public float maxStamina; //Estamina máxima  
     public float staminaToLoose;  //Estamina que se pierde al correr  
     public float staminaToRecover; //Estamina que se recupera al dejar de correr   
@@ -34,6 +35,7 @@ public class SCR_scr_Player_Options : ScriptableObject
     [Header("Ajustes varios")]
     public LayerMask whatIsGround;  //Capa que se debe detectar como suelo
     public float playerHeight; //Altura del modelo (importante para el ground check)
+    public float ladderInteractDistance;
     #endregion
 
     #region Opciones de recoger objetos
@@ -47,7 +49,11 @@ public class SCR_scr_Player_Options : ScriptableObject
     public KeyCode jumpKey; //Tecla para saltar
     public KeyCode sprintKey; //Tecla para correr
     public KeyCode pickKey; //Tecla para coger cosas
+    public KeyCode camKey; //Tecla para saltar
+    public KeyCode onLadderKey; //Tecla para subir a una escalera
+    public KeyCode offLadderKey; //Tecla para bajar de una escalera
     #endregion
 
     public bool usingCam;
+
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using UnityEditor.Timeline.Actions;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class SCR_pla_PlayerMovement : MonoBehaviour
 {
@@ -138,6 +139,19 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         {
             isRuning = false;
             speed = moveSpeed;
+        }
+
+        if (Input.GetKeyDown(playerOptions.onLadderKey))
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(orientation.transform.position, orientation.transform.forward, out hit, playerOptions.ladderInteractDistance))
+            {
+                SCR_obj_Ladder_script1 ladderScript = hit.transform.GetComponentInChildren<SCR_obj_Ladder_script1>();
+                if (ladderScript)
+                {
+                    ladderScript.canGoUp = true;
+                }
+            }
         }
     }
 

@@ -18,6 +18,7 @@ MonoBehaviour:
   canRun: 0
   moveSpeed: 2
   sprintSpeed: 5
+  ladderSpeed: 2
   maxStamina: 100
   staminaToLoose: 2
   staminaToRecover: 1
@@ -29,9 +30,13 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   playerHeight: 2.5
+  ladderInteractDistance: 2
   pickupRange: 5
   pickupForce: 100
   jumpKey: 32
   sprintKey: 304
   pickKey: 102
+  camKey: 101
+  onLadderKey: 103
+  offLadderKey: 306
   usingCam: 0
