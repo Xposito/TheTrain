@@ -65,7 +65,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
 
                 cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cameraMain);
                 if (GeometryUtility.TestPlanesAABB(cameraFrustum, bound))
-                {
+                {   
                     Debug.Log("detecto cubo");
                     itsPhoto = true;
                     
