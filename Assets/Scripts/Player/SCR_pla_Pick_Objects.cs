@@ -44,6 +44,7 @@ public class SCR_pla_Pick_Objects : MonoBehaviour
         {
             MoveObject();
         }
+
     }
 
 

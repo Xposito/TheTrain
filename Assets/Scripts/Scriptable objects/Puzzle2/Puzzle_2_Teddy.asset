@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Puzzle_2_Teddy
   m_EditorClassIdentifier: 
   itemName: Teddy bear
-  canBeMoved: 0
-  correctPlace: 0
+  canBeMoved: 1
+  correctPlace: 1

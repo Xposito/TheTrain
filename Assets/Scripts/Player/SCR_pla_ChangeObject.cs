@@ -44,7 +44,6 @@ public class SCR_pla_ChangeObject : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(cam.position, cam.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, layer))
         {
-            Debug.Log("si");
             SCR_scr_Puzzle_2_Item item = hit.transform.GetComponent<SCR_puz_Puzzle2_Item>().thisItem;
             if (item)
             {

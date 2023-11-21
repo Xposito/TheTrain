@@ -15,7 +15,7 @@ MonoBehaviour:
   sensX: 250
   sensY: 250
   canJump: 0
-  canRun: 0
+  canRun: 1
   moveSpeed: 2
   sprintSpeed: 5
   ladderSpeed: 2
@@ -39,4 +39,4 @@ MonoBehaviour:
   camKey: 101
   onLadderKey: 103
   offLadderKey: 306
-  usingCam: 0
+  usingCam: 1

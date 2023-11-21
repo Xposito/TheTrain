@@ -11,22 +11,37 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7123303
+      value: -5.333236
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.532
+      value: 0.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.5590192
+      value: 3.149565
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
         type: 3}
@@ -63,10 +78,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 1d8268855abe74343b5044c381832fc3,
+        type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 1d8268855abe74343b5044c381832fc3,
         type: 3}
       propertyPath: m_Name
-      value: MOD_env_teddybear Variant
+      value: PREF_env_teddybear Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
