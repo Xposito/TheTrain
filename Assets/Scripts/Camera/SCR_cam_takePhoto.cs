@@ -1,7 +1,10 @@
+using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
+using static UnityEditor.UIElements.ToolbarMenu;
 
 public class SCR_cam_takePhoto : MonoBehaviour
 {
@@ -23,9 +26,10 @@ public class SCR_cam_takePhoto : MonoBehaviour
     Plane[] cameraFrustum;
     public GameObject[] gameObjects;
     public Collider[] collidersProps;
-    Bounds[] collidersBounds;
-    Bounds bound;
+    //Bounds[] collidersBounds;
+    //Bounds bound;
     
+    public int layer;
 
 
     public SCR_scr_Player_Options playerOption;
@@ -33,6 +37,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
     [SerializeField] private Renderer[] renderCubo;
     public int elementos = 0;
     public bool itsPhoto = false;
+    public Animator animator;
 
 
     void Start()
@@ -43,14 +48,14 @@ public class SCR_cam_takePhoto : MonoBehaviour
         gameObjects = GameObject.FindGameObjectsWithTag("Prop");
 
         collidersProps = new BoxCollider[gameObjects.Length];
-        collidersBounds = new Bounds[gameObjects.Length];
+        //collidersBounds = new Bounds[gameObjects.Length];
 
-        for(int i = 0; i < gameObjects.Length; i++)
-        {
-            collidersProps[i] = gameObjects[i].GetComponent<Collider>();
-            collidersBounds[i] = collidersProps[i].bounds;
+        //for(int i = 0; i < gameObjects.Length; i++)
+        //{
+        //    collidersProps[i] = gameObjects[i].GetComponent<Collider>();
+            //collidersBounds[i] = collidersProps[i].bounds;
 
-        }
+        //}
 
     }
 
@@ -59,32 +64,47 @@ public class SCR_cam_takePhoto : MonoBehaviour
         
         if (playerOption.usingCam == true)
         {
-            for(int i = 0; i < gameObjects.Length; i++)
+            RaycastHit hit;
+            if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 7, layer))
             {
-                bound = collidersProps[i].bounds;
-
-                cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cameraMain);
-                if (GeometryUtility.TestPlanesAABB(cameraFrustum, bound))
-                {   
-                    Debug.Log("detecto cubo");
-                    itsPhoto = true;
-                    
-                }
-                else
+                Debug.Log(hit.transform.name);
+                if(hit.transform.name == gameObjects[0].transform.name && Input.GetMouseButtonDown(0))
                 {
-                    itsPhoto = false;
-                }
-            }
-            if (itsPhoto)
-            {
-                if (Input.GetMouseButtonDown(0))
-                {
-
+                    Debug.Log("Funciona");
+                    animator.SetBool("AbrirPuerta", true);
                     StartCoroutine(RecordFrame());
-
                 }
             }
-            
+
+            //for(int i = 0; i < gameObjects.Length; i++)
+            //{
+
+                //    bound = collidersProps[i].bounds;
+
+                //    cameraFrustum = GeometryUtility.CalculateFrustumPlanes(cameraMain);
+                //    if (GeometryUtility.TestPlanesAABB(cameraFrustum, bound))
+                //    {
+
+                //        Debug.Log("detecto cubo");
+                //        itsPhoto = true;
+
+                //    }
+                //    else
+                //    {
+                //        itsPhoto = false;
+                //    }
+                //}
+                //if (itsPhoto)
+                //{
+
+                //    if (Input.GetMouseButtonDown(0))
+                //    {
+
+                //        StartCoroutine(RecordFrame());
+
+                //    }
+                //}
+
 
         }
         //MyCollisions();
