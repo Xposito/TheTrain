@@ -29,7 +29,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
     //Bounds[] collidersBounds;
     //Bounds bound;
     
-    public int layer;
+    public LayerMask layer;
 
 
     public SCR_scr_Player_Options playerOption;
@@ -38,6 +38,9 @@ public class SCR_cam_takePhoto : MonoBehaviour
     public int elementos = 0;
     public bool itsPhoto = false;
     public Animator animator;
+
+    public GameObject flash;
+    public GameObject overlay;
 
 
     void Start()
@@ -68,11 +71,15 @@ public class SCR_cam_takePhoto : MonoBehaviour
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, 7, layer))
             {
                 Debug.Log(hit.transform.name);
-                if(hit.transform.name == gameObjects[0].transform.name && Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0))
                 {
-                    Debug.Log("Funciona");
-                    animator.SetBool("AbrirPuerta", true);
-                    StartCoroutine(RecordFrame());
+                    if (hit.transform.name == gameObjects[0].transform.name)
+                    {
+                        Debug.Log("Funciona");
+                        animator.SetBool("AbrirPuerta", true);
+                        flash.SetActive(false);
+                        StartCoroutine(RecordFrame());
+                    }
                 }
             }
 
@@ -115,7 +122,12 @@ public class SCR_cam_takePhoto : MonoBehaviour
     IEnumerator RecordFrame()
     {
         yield return new WaitForEndOfFrame();
+        overlay.SetActive(false);
+        yield return new WaitForEndOfFrame();
         var texture = ScreenCapture.CaptureScreenshotAsTexture();
+        yield return new WaitForEndOfFrame();
+        overlay.SetActive(true);
+        flash.SetActive(true);
 
         renderCubo[elementos].material.mainTexture = texture;
   
