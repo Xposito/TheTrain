@@ -20,37 +20,35 @@ public class SCR_cam_takePhoto : MonoBehaviour
 
     //Variables para las fotos
     //[Header("Variables Fotos")]
-    //[SerializeField] private Renderer[] renderCubo;
+    //[SerializeField] private Renderer[] renderCubo;  
 
-    Camera cameraMain;
-    Plane[] cameraFrustum;
-    public GameObject[] gameObjects;
-    public Collider[] collidersProps;
+    //Camera cameraMain;
+    //Plane[] cameraFrustum;
+    [Header("Arrays")]
+    public GameObject[] puertas;
     //Bounds[] collidersBounds;
     //Bounds bound;
     
     public LayerMask layer;
-
-
     public SCR_scr_Player_Options playerOption;
 
-    [SerializeField] private Renderer[] renderCubo;
-    public int elementos = 0;
-    public bool itsPhoto = false;
+    int elementos = 0;
+    int puertasInt = 0;
     public Animator animator;
 
+    [Header("UIPhoto")]
     public GameObject flash;
     public GameObject overlay;
-
+    [SerializeField] private Renderer[] renderCubo;
 
     void Start()
     {
         //Use this to ensure that the Gizmos are being drawn when in Play Mode.
         //m_Started = true;
-        cameraMain = GetComponent<Camera>();
-        gameObjects = GameObject.FindGameObjectsWithTag("Prop");
+        //cameraMain = GetComponent<Camera>();
+        
 
-        collidersProps = new BoxCollider[gameObjects.Length];
+        
         //collidersBounds = new Bounds[gameObjects.Length];
 
         //for(int i = 0; i < gameObjects.Length; i++)
@@ -73,13 +71,21 @@ public class SCR_cam_takePhoto : MonoBehaviour
                 Debug.Log(hit.transform.name);
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (hit.transform.name == gameObjects[0].transform.name)
+                    if (hit.collider.CompareTag("Bells"))
                     {
                         Debug.Log("Funciona");
+                        animator = puertas[puertasInt].transform.GetComponent<Animator>();
+                        
+                        
+
                         animator.SetBool("AbrirPuerta", true);
-                        flash.SetActive(false);
-                        StartCoroutine(RecordFrame());
+                        puertasInt++;
                     }
+
+                    Collider collider = hit.transform.GetComponent<Collider>();
+                    collider.enabled = false;
+                    flash.SetActive(false);
+                    StartCoroutine(RecordFrame());
                 }
             }
 
