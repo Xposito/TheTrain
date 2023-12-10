@@ -41,13 +41,15 @@ public class SCR_cam_takePhoto : MonoBehaviour
     public GameObject overlay;
     [SerializeField] private Renderer[] renderCubo;
 
+    public Tutorial tutorial;
+
     void Start()
     {
         //Use this to ensure that the Gizmos are being drawn when in Play Mode.
         //m_Started = true;
         //cameraMain = GetComponent<Camera>();
         
-
+        
         
         //collidersBounds = new Bounds[gameObjects.Length];
 
@@ -71,20 +73,21 @@ public class SCR_cam_takePhoto : MonoBehaviour
                 Debug.Log(hit.transform.name);
                 if (Input.GetMouseButtonDown(0))
                 {
-                    if (hit.collider.CompareTag("Bells"))
-                    {
-                        Debug.Log("Funciona");
-                        animator = puertas[puertasInt].transform.GetComponent<Animator>();
+                    //if (hit.collider.CompareTag("Bells"))
+                    //{
+                    //    Debug.Log("Funciona");
+                    //    animator = puertas[puertasInt].transform.GetComponent<Animator>();
                         
                         
 
-                        animator.SetBool("AbrirPuerta", true);
-                        puertasInt++;
-                    }
+                    //    animator.SetBool("AbrirPuerta", true);
+                    //    puertasInt++;
+                    //}
 
                     Collider collider = hit.transform.GetComponent<Collider>();
                     collider.enabled = false;
                     flash.SetActive(false);
+                    tutorial.CambioDeEstado();
                     StartCoroutine(RecordFrame());
                 }
             }

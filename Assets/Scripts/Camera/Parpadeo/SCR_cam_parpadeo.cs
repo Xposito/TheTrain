@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SCR_cam_parpadeo : StateMachineBehaviour
 {
+   
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
