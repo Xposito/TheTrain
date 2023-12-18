@@ -9,8 +9,9 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
 
     private bool onStairs;
     private Rigidbody rb;
-    private Transform playerPos;
     private SCR_pla_PlayerMovement player;
+    private float verticalInput;
+    private Vector3 moveDirection;
 
     private void Start()
     {
@@ -25,10 +26,9 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
             player = other.GetComponentInParent<SCR_pla_PlayerMovement>();
             if (player)
             {
-                playerPos = player.transform.GetComponent<Transform>();
                 rb = player.GetComponent<Rigidbody>();
                 onStairs = true;
-                Debug.Log("Player");
+                canGoUp = true;
             }
         }
     }
@@ -48,11 +48,17 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.W) && onStairs && canGoUp)
-        {
-            upStairs();
-        }
+        verticalInput = Input.GetAxisRaw("Vertical");
+        moveDirection = transform.up * verticalInput;
 
+        
+
+        if (onStairs && canGoUp)
+        {
+            rb.AddForce(moveDirection.normalized * playerOptions.ladderSpeed * 1000 * Time.deltaTime, ForceMode.Force);
+            player.enabled = false;
+            rb.useGravity = false;
+        }
 
         if (Input.GetKey(playerOptions.offLadderKey) && onStairs)
         {
@@ -60,21 +66,15 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
         }
     }
 
-    void upStairs()
-    {
-        player.enabled = false;
-        
-        rb.AddForce(transform.up * playerOptions.ladderSpeed * 1000 * Time.deltaTime, ForceMode.Force);
-        //playerPos.position += transform.up * speed * Time.deltaTime;
-    }
-
     void notOnStairs()
     {
+        
         player.enabled = true;
         player = null;
-        playerPos = null;
         onStairs = false;
         canGoUp = false;
+        rb.useGravity = true;
+        rb.AddForce(transform.forward * -1 * 1000 * Time.deltaTime, ForceMode.Impulse);
         rb = null;
 
     }

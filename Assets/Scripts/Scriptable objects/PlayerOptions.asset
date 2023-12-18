@@ -18,12 +18,13 @@ MonoBehaviour:
   canRun: 1
   moveSpeed: 2
   sprintSpeed: 5
-  ladderSpeed: 2
+  crouchSpeed: 0.5
+  ladderSpeed: 1
   maxStamina: 100
   staminaToLoose: 2
   staminaToRecover: 1
   groundDrag: 5
-  jumpForce: 5
+  jumpForce: 7
   jumpCoolDown: 0.25
   airMultiplier: 0.4
   whatIsGround:
@@ -35,8 +36,9 @@ MonoBehaviour:
   pickupForce: 100
   jumpKey: 32
   sprintKey: 304
+  crouchKey: 99
   pickKey: 102
   camKey: 101
   onLadderKey: 103
   offLadderKey: 306
-  usingCam: 1
+  usingCam: 0

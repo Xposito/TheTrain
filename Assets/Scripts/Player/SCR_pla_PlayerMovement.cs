@@ -14,6 +14,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     [Header("Movimiento")]
     private float moveSpeed; //Velocidad al andar
     private float sprintSpeed; //Velocidad al correr  
+    private float crouchSpeed; //Velocidad al agacharse
     private float maxStamina; //Estamina máxima  
     private float staminaToLoose;  //Estamina que se pierde al correr  
     private float staminaToRecover; //Estamina que se recupera al dejar de correr   
@@ -33,12 +34,16 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     [Header("Ajustes varios")]
     private LayerMask whatIsGround;  //Capa que se debe detectar como suelo
     private float playerHeight = 2; //Altura del modelo (importante para el ground check)
+
     public bool canJump;
     public bool canRun;
+    public bool canCrouch;
+
 
     [Header("Binds")]
     private KeyCode jumpKey = KeyCode.Space; //Tecla para saltar
     private KeyCode sprintKey = KeyCode.LeftShift; //Tecla para correr
+    private KeyCode crouchKey; //Tecla para correr
 
     private Transform orientation; //Transform para girar al personaje al girar la cámara (debe ser el body)
     [HideInInspector] public bool grounded;
@@ -47,9 +52,12 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
     private Rigidbody rb;
     private bool isRuning;
+    private bool isCrouching;
     private bool resting;
 
     #endregion
+
+    public GameObject body;
 
 
     void Start()
@@ -57,7 +65,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         InitializePlayerOptions();
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
+        isCrouching = false;
         speed = moveSpeed;
         stamina = maxStamina;
         readyToJump = true;
@@ -78,6 +86,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
     {
         moveSpeed = playerOptions.moveSpeed;
         sprintSpeed = playerOptions.sprintSpeed;
+        crouchSpeed = playerOptions.crouchSpeed;
         maxStamina = playerOptions.maxStamina;
         staminaToLoose = playerOptions.staminaToLoose;
         staminaToRecover = playerOptions.staminaToRecover;
@@ -92,6 +101,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
 
         jumpKey = playerOptions.jumpKey;
         sprintKey = playerOptions.sprintKey;
+        crouchKey = playerOptions.crouchKey;
 
         canJump = playerOptions.canJump;
         canRun = playerOptions.canRun;
@@ -119,6 +129,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
 
+        //Saltar
         if (Input.GetKey(jumpKey) && readyToJump && grounded && canJump)
         {
             readyToJump = false;
@@ -126,7 +137,8 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCoolDown); //Esto es para que salte el personaje de forma automática si mantienes apretado el botón de saltar
         }
 
-        if (Input.GetKeyDown(sprintKey) && grounded && canRun)
+        //Correr
+        if (Input.GetKeyDown(sprintKey) && grounded && canRun && !isCrouching)
         {
             if (rb.velocity != new Vector3(0, 0, 0) && stamina > 0)
             {
@@ -135,24 +147,44 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(sprintKey) || stamina <= 0)
+        //Dejar de correr
+        if (Input.GetKeyUp(sprintKey) && !isCrouching || stamina <= 0 && !isCrouching)
         {
             isRuning = false;
             speed = moveSpeed;
         }
 
-        if (Input.GetKeyDown(playerOptions.onLadderKey))
+        //Agacharse
+        if (Input.GetKeyDown(crouchKey) && grounded && isCrouching == false && canCrouch)
         {
-            RaycastHit hit;
-            if (Physics.Raycast(orientation.transform.position, orientation.transform.forward, out hit, playerOptions.ladderInteractDistance))
-            {
-                SCR_obj_Ladder_script1 ladderScript = hit.transform.GetComponentInChildren<SCR_obj_Ladder_script1>();
-                if (ladderScript)
-                {
-                    ladderScript.canGoUp = true;
-                }
-            }
+            body.transform.localScale = new Vector3(body.transform.localScale.x, 1.25f / 2, body.transform.localScale.z);
+            rb.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+            speed = crouchSpeed;
+            isCrouching = true;
         }
+
+        //Levantarse
+        else if (Input.GetKeyDown(crouchKey) && grounded && isCrouching == true && canCrouch)
+        {
+            body.transform.localScale = new Vector3(body.transform.localScale.x, 1.25f, body.transform.localScale.z);
+            speed = moveSpeed;
+            isCrouching = false;
+        }
+
+        //Subirse a escalera (desactivado por ahora)
+
+        //if (Input.GetKeyDown(playerOptions.onLadderKey))
+        //{
+        //    RaycastHit hit;
+        //    if (Physics.Raycast(orientation.transform.position, orientation.transform.forward, out hit, playerOptions.ladderInteractDistance))
+        //    {
+        //        SCR_obj_Ladder_script1 ladderScript = hit.transform.GetComponentInChildren<SCR_obj_Ladder_script1>();
+        //        if (ladderScript)
+        //        {
+        //            ladderScript.canGoUp = true;
+        //        }
+        //    }
+        //}
     }
 
 

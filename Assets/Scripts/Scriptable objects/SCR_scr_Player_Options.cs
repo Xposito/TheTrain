@@ -21,6 +21,7 @@ public class SCR_scr_Player_Options : ScriptableObject
     [Header("Movimiento")]
     public float moveSpeed; //Velocidad al andar
     public float sprintSpeed; //Velocidad al correr  
+    public float crouchSpeed; //Velocidad al agacharse  
     public float ladderSpeed; //Velocidad al subir escaleras
     public float maxStamina; //Estamina máxima  
     public float staminaToLoose;  //Estamina que se pierde al correr  
@@ -48,6 +49,7 @@ public class SCR_scr_Player_Options : ScriptableObject
     [Header("Binds")]
     public KeyCode jumpKey; //Tecla para saltar
     public KeyCode sprintKey; //Tecla para correr
+    public KeyCode crouchKey; //Tecla para agacharse
     public KeyCode pickKey; //Tecla para coger cosas
     public KeyCode camKey; //Tecla para saltar
     public KeyCode onLadderKey; //Tecla para subir a una escalera
