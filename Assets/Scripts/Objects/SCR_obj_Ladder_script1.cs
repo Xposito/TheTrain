@@ -46,6 +46,11 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
         }
     }
 
+
+
+
+
+
     private void Update()
     {
         verticalInput = Input.GetAxisRaw("Vertical");
@@ -56,6 +61,7 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
         if (onStairs && canGoUp)
         {
             rb.AddForce(moveDirection.normalized * playerOptions.ladderSpeed * 1000 * Time.deltaTime, ForceMode.Force);
+            LadderSpeedControl();
             player.enabled = false;
             rb.useGravity = false;
         }
@@ -65,6 +71,23 @@ public class SCR_obj_Ladder_script1 : MonoBehaviour
             notOnStairs();
         }
     }
+
+
+
+
+    private void LadderSpeedControl()
+    {
+        Vector3 flatVel = new Vector3(0f, rb.velocity.y, 0f);
+
+        if (flatVel.magnitude > playerOptions.ladderSpeed)
+        {
+            Vector3 limitedVel = flatVel.normalized * playerOptions.ladderSpeed;
+            rb.velocity = new Vector3(rb.velocity.x, limitedVel.y, rb.velocity.z);
+        }
+    }
+
+
+
 
     void notOnStairs()
     {

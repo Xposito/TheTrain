@@ -224,6 +224,17 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
         }
     }
 
+    private void LadderSpeedControl()
+    {
+        Vector3 flatVel = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
+
+        if (flatVel.magnitude > playerOptions.ladderSpeed)
+        {
+            Vector3 limitedVel = flatVel.normalized * speed;
+            rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
 
     private void looseStamina() //Perder estamina al correr
     {
