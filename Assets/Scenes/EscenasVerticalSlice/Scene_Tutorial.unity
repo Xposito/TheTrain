@@ -786,7 +786,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOptions: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
   material1: {fileID: 2100000, guid: 46f9fc7ec5a676446ad5e2266a3b867a, type: 2}
-  material2: {fileID: 2100000, guid: 76960018caa922149a67f69f03ff988c, type: 2}
+  material2: {fileID: 2100000, guid: 495cf58e38133f4429eccf1a06e42d2e, type: 2}
   meshRenderer: {fileID: 0}
 --- !u!65 &422159815
 BoxCollider:
@@ -1290,6 +1290,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7905869323830370468, guid: 556ca5d0313f5814b884d391c28c0bc5,
+        type: 3}
+      propertyPath: field of view
+      value: 44
       objectReference: {fileID: 0}
     - target: {fileID: 8131128355071531031, guid: 556ca5d0313f5814b884d391c28c0bc5,
         type: 3}
@@ -2398,6 +2403,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 827159223245045856, guid: bf4f9001cc048ac4eaa6a45e4677e493,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 827159223245045856, guid: bf4f9001cc048ac4eaa6a45e4677e493,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 643e220cdf6aafe4296bf840d0268c02, type: 2}
@@ -2805,7 +2815,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 44
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -2927,7 +2937,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOptions: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
   material1: {fileID: 2100000, guid: 46f9fc7ec5a676446ad5e2266a3b867a, type: 2}
-  material2: {fileID: 2100000, guid: 76960018caa922149a67f69f03ff988c, type: 2}
+  material2: {fileID: 2100000, guid: 495cf58e38133f4429eccf1a06e42d2e, type: 2}
   meshRenderer: {fileID: 0}
 --- !u!1 &1343727070 stripped
 GameObject:
@@ -3568,7 +3578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOptions: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
   material1: {fileID: 2100000, guid: 46f9fc7ec5a676446ad5e2266a3b867a, type: 2}
-  material2: {fileID: 2100000, guid: 76960018caa922149a67f69f03ff988c, type: 2}
+  material2: {fileID: 2100000, guid: 495cf58e38133f4429eccf1a06e42d2e, type: 2}
   meshRenderer: {fileID: 0}
 --- !u!65 &1527711788
 BoxCollider:
@@ -4203,7 +4213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerOptions: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
   material1: {fileID: 2100000, guid: 46f9fc7ec5a676446ad5e2266a3b867a, type: 2}
-  material2: {fileID: 2100000, guid: 845ef61c4c953e64ba0aceace6fad943, type: 2}
+  material2: {fileID: 2100000, guid: 0c1f59f6cdf520c4cbe11dbdc030aa51, type: 2}
   meshRenderer: {fileID: 0}
 --- !u!4 &2085315953 stripped
 Transform:
