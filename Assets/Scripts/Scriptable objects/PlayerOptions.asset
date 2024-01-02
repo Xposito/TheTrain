@@ -14,6 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensX: 250
   sensY: 250
+  camTimeOn: 10
+  camTimeOff: 10
+  timer: 15
+  usingCam: 0
   canJump: 0
   canRun: 1
   moveSpeed: 2
@@ -41,4 +45,3 @@ MonoBehaviour:
   camKey: 101
   onLadderKey: 103
   offLadderKey: 306
-  usingCam: 0

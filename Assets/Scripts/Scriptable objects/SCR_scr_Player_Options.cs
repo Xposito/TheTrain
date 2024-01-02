@@ -6,10 +6,18 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "PlayerOptions", menuName = "ScriptableObjects/PlayerOptions")]
 public class SCR_scr_Player_Options : ScriptableObject
 {
-    #region Opciones de cámara
+    #region Opciones de movimiento cámara
     [Header("Cam")]
     public float sensX; //Sensibilidad en X
     public float sensY; //Sensibilidad en Y
+    #endregion
+
+    #region Opciones de cámara in-game
+    [Header("In-game cam")]
+    public float camTimeOn; //Tiempo que la camara puede estar encendida
+    public float camTimeOff; //Tiempo que se necesita para volver a encender la camara
+    public float timer;
+    public bool usingCam;
     #endregion
 
     #region Opciones de movimiento
@@ -55,7 +63,4 @@ public class SCR_scr_Player_Options : ScriptableObject
     public KeyCode onLadderKey; //Tecla para subir a una escalera
     public KeyCode offLadderKey; //Tecla para bajar de una escalera
     #endregion
-
-    public bool usingCam;
-
 }

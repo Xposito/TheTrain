@@ -62,7 +62,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        InitializePlayerOptions();
+        
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
         isCrouching = false;
@@ -75,6 +75,7 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        InitializePlayerOptions();
         CheckFloor(); //Check del suelo
         myInput();  //Controla los input del jugador    
         MovePlayer();  //Mueve al personaje  
@@ -170,21 +171,6 @@ public class SCR_pla_PlayerMovement : MonoBehaviour
             speed = moveSpeed;
             isCrouching = false;
         }
-
-        //Subirse a escalera (desactivado por ahora)
-
-        //if (Input.GetKeyDown(playerOptions.onLadderKey))
-        //{
-        //    RaycastHit hit;
-        //    if (Physics.Raycast(orientation.transform.position, orientation.transform.forward, out hit, playerOptions.ladderInteractDistance))
-        //    {
-        //        SCR_obj_Ladder_script1 ladderScript = hit.transform.GetComponentInChildren<SCR_obj_Ladder_script1>();
-        //        if (ladderScript)
-        //        {
-        //            ladderScript.canGoUp = true;
-        //        }
-        //    }
-        //}
     }
 
 

@@ -17,13 +17,14 @@ public class SCR_pla_CameraMovement : MonoBehaviour
 
     void Start()
     {
-        InitializePlayerOptions();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
     private void Update()
     {
+        InitializePlayerOptions();
+
         float mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
         float mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
 

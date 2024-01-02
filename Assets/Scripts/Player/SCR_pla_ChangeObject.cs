@@ -9,9 +9,16 @@ public class SCR_pla_ChangeObject : MonoBehaviour
     public Transform cam;
     public LayerMask layer;
 
+    private bool camIsOff;
+
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponentInChildren<AudioSource>();
+        camIsOff = true;
+        playerOptions.timer = playerOptions.camTimeOff;
         camOverlay.SetActive(false);
         playerOptions.usingCam = false;
     }
@@ -19,21 +26,41 @@ public class SCR_pla_ChangeObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(playerOptions.camKey) && playerOptions.usingCam == false)
+        if (Input.GetKeyDown(playerOptions.camKey) && playerOptions.usingCam == false && camIsOff && playerOptions.timer >= playerOptions.camTimeOff)
         {
             playerOptions.usingCam = true;
             camOverlay.SetActive(true);
+            camIsOff = false;
+            playerOptions.timer = playerOptions.camTimeOn;
         }
 
-        else if (Input.GetKeyDown(playerOptions.camKey) && playerOptions.usingCam == true)
+        else if (Input.GetKeyDown(playerOptions.camKey) && playerOptions.usingCam == true && !camIsOff)
         {
             playerOptions.usingCam = false;
             camOverlay.SetActive(false);
+            camIsOff = true;
         }
 
-        if (playerOptions.usingCam == true)
+        if (playerOptions.usingCam == true && !camIsOff)
         {
             Puzzle2Interact();
+            playerOptions.timer -= 1 * Time.deltaTime;
+
+            if(playerOptions.timer <= 0)
+            {
+                playerOptions.usingCam = false;
+                camOverlay.SetActive(false);
+                camIsOff = true;
+            }
+        }
+
+        if(camIsOff)
+        {
+            playerOptions.timer += 1 * Time.deltaTime;
+            if(playerOptions.timer >= playerOptions.camTimeOff)
+            {
+                playerOptions.timer = playerOptions.camTimeOff;
+            }
         }
     }
 
