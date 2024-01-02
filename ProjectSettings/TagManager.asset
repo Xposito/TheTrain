@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Prop
   - Bells
+  - Puzzle2
+  - PuzzleComida
   layers:
   - Default
   - TransparentFX
