@@ -56,7 +56,7 @@ public class SCR_ui_pause_menu : MonoBehaviour
     {
         Time.timeScale = 1f;
         Debug.Log("1");
-        SceneManager.LoadScene("1");
+        SceneManager.LoadScene("Scene_Main_menu");
     }
 
     public void QuitGame()
