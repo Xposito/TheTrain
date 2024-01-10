@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Vag\xF3n 2"
+  m_Name: Vagon1_SoportecitoSofacin
   m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -88,7 +88,7 @@ Material:
         m_Scale: {x: 7.5, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HalfTonePatternMap:
-        m_Texture: {fileID: 2800000, guid: 640c33a8475b7e145b57c8d9dfd9ab10, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5271e2c0f4215fd49a898c999d134b16, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HalfToneRamp1:
@@ -104,8 +104,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HatchingNoiseMap:
-        m_Texture: {fileID: 2800000, guid: 640c33a8475b7e145b57c8d9dfd9ab10, type: 3}
-        m_Scale: {x: 5.96, y: 1.66}
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 0.7, y: 0.31}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -153,7 +153,7 @@ Material:
     - _AlphaClip: 0
     - _Blend: 0
     - _BrushLowerCut: 0.329
-    - _BrushSize: 1.36
+    - _BrushSize: 1.35
     - _BumpScale: 1
     - _CameraDistanceImpact: 0
     - _CelExtraEnabled: 0
@@ -162,10 +162,10 @@ Material:
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
-    - _Cutoff: 0.468
+    - _Cutoff: 0.883
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseStep: 0.39
+    - _DiffuseStep: 0.32
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DotSize: 0.7
@@ -203,24 +203,24 @@ Material:
     - _HairSpecStepOffset: 0.5
     - _HairSpecularSize: 0.643
     - _HairSpecularSmoothness: 0.143
-    - _HalfToneDiffuseStep: 0.03
-    - _HalfToneEnabled: 0
+    - _HalfToneDiffuseStep: 1
+    - _HalfToneEnabled: 1
     - _HalfToneIncludeReceivedShadow: 1
     - _HalfToneShape: 3
-    - _HalfToneUvMode: 1
-    - _HalftoneFadeDistance: 54.8
-    - _HalftoneFadeToColor: 0
-    - _HalftoneNoiseClip: 16
+    - _HalfToneUvMode: 0
+    - _HalftoneFadeDistance: 58.5
+    - _HalftoneFadeToColor: 0.079
+    - _HalftoneNoiseClip: 4.6
     - _HalftoneTilling: 108.7
     - _HatchDiffuseOffset: 0
     - _HatchDrawStrength: 1
     - _HatchLowerBound: 0.1
     - _HatchUpperBound: 0.1
-    - _HatchingDensity: 0.432
+    - _HatchingDensity: 2
     - _HatchingDiffuseOffset: 0
-    - _HatchingDrawStrength: 5.95
-    - _HatchingEnabled: 1
-    - _HatchingRotation: 38.3
+    - _HatchingDrawStrength: 9.6
+    - _HatchingEnabled: 0
+    - _HatchingRotation: 0
     - _HatchingSmoothness: 0.01
     - _LightContribution: 1
     - _LightFalloffSize: 1
@@ -230,7 +230,7 @@ Material:
     - _Mode: 0
     - _Nearest_Distance: 0
     - _NoiseScale: -2.67
-    - _NoiseStrength: 0.039
+    - _NoiseStrength: 0.134
     - _OcclusionStrength: 1
     - _OutlineDepthOffset: 0
     - _OutlineEnabled: 1
@@ -247,7 +247,7 @@ Material:
     - _RemapOutputMax: 0.95
     - _RemapOutputMin: -2
     - _RimEnabled: 0
-    - _RimLightAlign: 0.39
+    - _RimLightAlign: 0.42
     - _RimLightSmoothness: 0
     - _RimPower: 0.635
     - _SSOutlineDepthThredshold: 1
@@ -259,7 +259,7 @@ Material:
     - _SelfShadingSizeExtra: 0.6
     - _ShadowEdgeSize: 0.05
     - _ShadowEdgeSizeExtra: 0.05
-    - _SizeFalloff: 0.373
+    - _SizeFalloff: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 1
     - _SpecClipMaskScale: 1
@@ -294,7 +294,7 @@ Material:
     - _ZWrite: 1
     - _brushScale: 8
     m_Colors:
-    - _BaseColor: {r: 0.7075472, g: 0.6419795, b: 0.57071024, a: 1}
+    - _BaseColor: {r: 0.44705883, g: 0.40784314, b: 0.38431373, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0.5660378, g: 0.258989, b: 0.258989, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
@@ -310,13 +310,13 @@ Material:
     - _HairSpecColor: {r: 0, g: 0, b: 0, a: 0.548}
     - _HairSpecHeightMinMax: {r: 0, g: 1, b: 0, a: 0}
     - _HairSpecParameters: {r: 0, g: 0, b: 0, a: 0}
-    - _HalfToneColor: {r: 0, g: 0, b: 0, a: 0.685}
+    - _HalfToneColor: {r: 0, g: 0, b: 0, a: 0.765}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}
-    - _RimColor: {r: 1, g: 0.08909073, b: 0, a: 1}
+    - _RimColor: {r: 0.122641504, g: 0.10176414, b: 0.06999821, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0.772}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 1}
