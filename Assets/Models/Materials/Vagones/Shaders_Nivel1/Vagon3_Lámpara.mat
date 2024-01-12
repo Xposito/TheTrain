@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vagon3_Almohadas
+  m_Name: "Vagon3_L\xE1mpara"
   m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -216,9 +216,9 @@ Material:
     - _HatchDrawStrength: 1
     - _HatchLowerBound: 0.1
     - _HatchUpperBound: 0.1
-    - _HatchingDensity: 0
-    - _HatchingDiffuseOffset: -0.07
-    - _HatchingDrawStrength: 8.7
+    - _HatchingDensity: 0.15
+    - _HatchingDiffuseOffset: -0.1
+    - _HatchingDrawStrength: 7.5
     - _HatchingEnabled: 1
     - _HatchingRotation: 0
     - _HatchingSmoothness: 0.01
@@ -226,7 +226,7 @@ Material:
     - _LightFalloffSize: 1
     - _LightmapDirectionPitch: 0
     - _LightmapDirectionYaw: 0
-    - _Metallic: 0
+    - _Metallic: 0.35
     - _Mode: 0
     - _Nearest_Distance: 0
     - _NoiseScale: -3.72
@@ -236,7 +236,7 @@ Material:
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 6.4
+    - _OutlineWidth: 8.79
     - _Outline_Width: 0
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
@@ -260,7 +260,7 @@ Material:
     - _ShadowEdgeSize: 0.05
     - _ShadowEdgeSizeExtra: 0.05
     - _SizeFalloff: 0.373
-    - _Smoothness: 0
+    - _Smoothness: 0.541
     - _SmoothnessTextureChannel: 1
     - _SpecClipMaskScale: 1
     - _SpecShadowStrength: 1
@@ -294,7 +294,7 @@ Material:
     - _ZWrite: 1
     - _brushScale: 8
     m_Colors:
-    - _BaseColor: {r: 0.7169812, g: 0.6931083, b: 0.66625136, a: 1}
+    - _BaseColor: {r: 0.6226415, g: 0.6104417, b: 0.59620863, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0.5660378, g: 0.258989, b: 0.258989, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
@@ -312,7 +312,7 @@ Material:
     - _HairSpecParameters: {r: 0, g: 0, b: 0, a: 0}
     - _HalfToneColor: {r: 0, g: 0, b: 0, a: 0.365}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HatchingColor: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 0}
+    - _HatchingColor: {r: 0.5754717, g: 0.5564703, b: 0.5564703, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}

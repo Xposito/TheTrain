@@ -218,7 +218,7 @@ Material:
     - _HatchUpperBound: 0.1
     - _HatchingDensity: 2
     - _HatchingDiffuseOffset: -0.07
-    - _HatchingDrawStrength: 6.47
+    - _HatchingDrawStrength: 10.1
     - _HatchingEnabled: 1
     - _HatchingRotation: 44.2
     - _HatchingSmoothness: 1
@@ -236,7 +236,7 @@ Material:
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 0
+    - _OutlineWidth: 9.16
     - _Outline_Width: 0
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
@@ -260,7 +260,7 @@ Material:
     - _ShadowEdgeSize: 0.05
     - _ShadowEdgeSizeExtra: 0.05
     - _SizeFalloff: 0.373
-    - _Smoothness: 0.474
+    - _Smoothness: 0.622
     - _SmoothnessTextureChannel: 1
     - _SpecClipMaskScale: 1
     - _SpecShadowStrength: 1
