@@ -165,7 +165,7 @@ Material:
     - _Cutoff: 0.468
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseStep: 0.63
+    - _DiffuseStep: 0.57
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DotSize: 0.7
@@ -216,11 +216,11 @@ Material:
     - _HatchDrawStrength: 1
     - _HatchLowerBound: 0.1
     - _HatchUpperBound: 0.1
-    - _HatchingDensity: 0
+    - _HatchingDensity: 0.83
     - _HatchingDiffuseOffset: -0.07
-    - _HatchingDrawStrength: 8.9
+    - _HatchingDrawStrength: 7.9
     - _HatchingEnabled: 1
-    - _HatchingRotation: 0
+    - _HatchingRotation: 14.7
     - _HatchingSmoothness: 0.01
     - _LightContribution: 1
     - _LightFalloffSize: 1
@@ -236,7 +236,7 @@ Material:
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 0
+    - _OutlineWidth: 8.36
     - _Outline_Width: 0
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
@@ -275,12 +275,12 @@ Material:
     - _SrcBlend: 1
     - _StencilComp: 0
     - _StencilRef: -7.25
-    - _StepViaRampTexture: 0
+    - _StepViaRampTexture: 1
     - _Surface: 0
     - _TOON_SHADING: 1
     - _TextureBlendingMode: 0
     - _TextureImpact: 1
-    - _ToonBlending: 1
+    - _ToonBlending: 0.053
     - _ToonEnabled: 1
     - _UVSec: 0
     - _UnityShadowMode: 0
@@ -312,7 +312,7 @@ Material:
     - _HairSpecParameters: {r: 0, g: 0, b: 0, a: 0}
     - _HalfToneColor: {r: 0, g: 0, b: 0, a: 0.365}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HatchingColor: {r: 0, g: 0, b: 0, a: 0}
+    - _HatchingColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}

@@ -14,6 +14,7 @@ Material:
   m_ValidKeywords:
   - _HALFTONESHAPE_CUSTOM
   - _OUTLINE
+  - _RIMLIGHTING_ON
   - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   - _SPECULARHIGHLIGHTS_OFF
   - _TOON_SHADING_ON
@@ -236,7 +237,7 @@ Material:
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 0
+    - _OutlineWidth: 12
     - _Outline_Width: 0
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
@@ -246,10 +247,10 @@ Material:
     - _RemapInputMin: 0
     - _RemapOutputMax: 0.95
     - _RemapOutputMin: -2
-    - _RimEnabled: 0
-    - _RimLightAlign: 0.39
+    - _RimEnabled: 1
+    - _RimLightAlign: 0.78
     - _RimLightSmoothness: 0
-    - _RimPower: 0.635
+    - _RimPower: 0.376
     - _SSOutlineDepthThredshold: 1
     - _SSOutlineNdotVThredshold: 0.2
     - _SSOutlineNormalThredshold: 0.305
@@ -312,11 +313,11 @@ Material:
     - _HairSpecParameters: {r: 0, g: 0, b: 0, a: 0}
     - _HalfToneColor: {r: 0, g: 0, b: 0, a: 0.365}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HatchingColor: {r: 0, g: 0, b: 0, a: 0}
+    - _HatchingColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 0}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}
-    - _RimColor: {r: 1, g: 0.08909073, b: 0, a: 1}
+    - _RimColor: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0.772}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 1}

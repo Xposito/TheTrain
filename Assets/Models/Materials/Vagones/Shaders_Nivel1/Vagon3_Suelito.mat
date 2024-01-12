@@ -105,7 +105,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _HatchingNoiseMap:
         m_Texture: {fileID: 2800000, guid: 29d5f9cfb7bc7524a8ab38a4ad0d17e3, type: 3}
-        m_Scale: {x: -2.43, y: -0.32}
+        m_Scale: {x: 0.26, y: -0.32}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -165,7 +165,7 @@ Material:
     - _Cutoff: 0.468
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseStep: 0.36
+    - _DiffuseStep: 0.27
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DotSize: 0.7
@@ -220,7 +220,7 @@ Material:
     - _HatchingDiffuseOffset: -0.07
     - _HatchingDrawStrength: 6.47
     - _HatchingEnabled: 1
-    - _HatchingRotation: 44.2
+    - _HatchingRotation: 56
     - _HatchingSmoothness: 1
     - _LightContribution: 1
     - _LightFalloffSize: 1
@@ -236,7 +236,7 @@ Material:
     - _OutlineEnabled: 1
     - _OutlineMode: 0
     - _OutlineScale: 1
-    - _OutlineWidth: 0
+    - _OutlineWidth: 12
     - _Outline_Width: 0
     - _OverrideLightmapDir: 0
     - _Parallax: 0.02
