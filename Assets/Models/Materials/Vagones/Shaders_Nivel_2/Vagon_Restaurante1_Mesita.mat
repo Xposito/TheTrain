@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vagon_Restaurante1
+  m_Name: Vagon_Restaurante1_Mesita
   m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -35,7 +35,7 @@ Material:
   - _STEPVIARAMPTEXTURE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 1
+  m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2500
   stringTagMap:
     RenderType: TransparentCutout
@@ -93,8 +93,8 @@ Material:
         m_Scale: {x: 0.62, y: 0.03}
         m_Offset: {x: 0, y: 0}
     - _HatchingNoiseMap:
-        m_Texture: {fileID: 2800000, guid: 29d5f9cfb7bc7524a8ab38a4ad0d17e3, type: 3}
-        m_Scale: {x: 3.67, y: 0.8}
+        m_Texture: {fileID: 2800000, guid: 640c33a8475b7e145b57c8d9dfd9ab10, type: 3}
+        m_Scale: {x: -50, y: -1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -145,11 +145,11 @@ Material:
     - _BumpScale: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.251
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseStep: -1
+    - _DiffuseStep: 1
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DstBlend: 0
@@ -181,11 +181,11 @@ Material:
     - _HatchDiffuseOffset: 0.415
     - _HatchDrawStrength: 9.59
     - _HatchSmoothness: 0.01
-    - _HatchingDensity: 0.7
+    - _HatchingDensity: 0.63
     - _HatchingDiffuseOffset: 0.38
     - _HatchingDrawStrength: 15
     - _HatchingEnabled: 1
-    - _HatchingRotation: 90
+    - _HatchingRotation: 0
     - _HatchingSmoothness: 0.01
     - _LightContribution: 1
     - _LightFalloffSize: 1
@@ -224,12 +224,12 @@ Material:
     - _Surface: 0
     - _ToonBlending: 1
     - _ToonEnabled: 0
-    - _UseRampColor: 1
+    - _UseRampColor: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
     - _brushScale: 30
     m_Colors:
-    - _BaseColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 1}
+    - _BaseColor: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FaceFrontDirection: {r: 0, g: 0, b: 1, a: 0}
@@ -237,11 +237,11 @@ Material:
     - _HairSpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _HalfToneColor: {r: 0.45098037, g: 0.45098037, b: 0.45098037, a: 1}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
-    - _HatchingColor: {r: 0.3294091, g: 0.3294091, b: 0.3294091, a: 1}
+    - _HatchingColor: {r: 0.32941177, g: 0.32941177, b: 0.32941177, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutlineDistancFade: {r: -12.29, g: 26.606895, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _ShadowColor: {r: 0.18823162, g: 0.18823162, b: 0.18823162, a: 0}
+    - _ShadowColor: {r: 0.18823305, g: 0.18823305, b: 0.18823305, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 0.5}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []
