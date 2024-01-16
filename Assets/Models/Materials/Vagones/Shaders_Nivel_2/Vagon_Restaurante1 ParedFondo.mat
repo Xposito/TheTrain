@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Vagon_Restaurante1 ParedFondo
-  m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
+  m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -189,7 +189,7 @@ Material:
     - _HatchingSmoothness: 0.01
     - _LightContribution: 1
     - _LightFalloffSize: 1
-    - _Metallic: 0
+    - _Metallic: 0.576
     - _NoiseScale: 3
     - _NoiseStrength: 0.31
     - _OcclusionStrength: 1
@@ -206,7 +206,7 @@ Material:
     - _RimPower: 0.55
     - _Shininess: 0
     - _SizeFalloff: 1
-    - _Smoothness: 0.5
+    - _Smoothness: 0
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecClipMaskScale: 40.9
