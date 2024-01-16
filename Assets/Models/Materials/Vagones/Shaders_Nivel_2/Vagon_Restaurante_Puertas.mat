@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Vagon_Restaurante1
-  m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
+  m_Name: Vagon_Restaurante_Puertas
+  m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -189,7 +189,7 @@ Material:
     - _HatchingSmoothness: 0.01
     - _LightContribution: 1
     - _LightFalloffSize: 1
-    - _Metallic: 0.533
+    - _Metallic: 0
     - _NoiseScale: 3
     - _NoiseStrength: 0.31
     - _OcclusionStrength: 1
@@ -206,7 +206,7 @@ Material:
     - _RimPower: 0.55
     - _Shininess: 0
     - _SizeFalloff: 1
-    - _Smoothness: 0.015
+    - _Smoothness: 0.5
     - _SmoothnessSource: 0
     - _SmoothnessTextureChannel: 0
     - _SpecClipMaskScale: 40.9
@@ -229,7 +229,7 @@ Material:
     - _ZWrite: 1
     - _brushScale: 30
     m_Colors:
-    - _BaseColor: {r: 0.6509804, g: 0.6509804, b: 0.6509804, a: 1}
+    - _BaseColor: {r: 0.2264151, g: 0.21253115, b: 0.21253115, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FaceFrontDirection: {r: 0, g: 0, b: 1, a: 0}
