@@ -68,7 +68,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _HatchingNoiseMap:
         m_Texture: {fileID: 2800000, guid: 29d5f9cfb7bc7524a8ab38a4ad0d17e3, type: 3}
-        m_Scale: {x: 42.17, y: 36.76}
+        m_Scale: {x: 45.54, y: 36.76}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 0}
@@ -109,7 +109,7 @@ Material:
     - _HatchDrawStrength: 9.59
     - _HatchingDensity: 1.2
     - _HatchingDiffuseOffset: 0.27
-    - _HatchingDrawStrength: 8.39
+    - _HatchingDrawStrength: 6.1
     - _HatchingEnabled: 1
     - _Metallic: 0
     - _NoiseScale: 17.26
@@ -134,11 +134,11 @@ Material:
     - _ZWrite: 1
     - _brushScale: 30
     m_Colors:
-    - _BaseColor: {r: 0.6509434, g: 0.6509434, b: 0.6509434, a: 1}
+    - _BaseColor: {r: 0.990566, g: 0.990566, b: 0.990566, a: 1}
     - _HairSpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _HalfToneColor: {r: 0.45098037, g: 0.45098037, b: 0.45098037, a: 1}
-    - _HatchingColor: {r: 0.08490568, g: 0.08490568, b: 0.08490568, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HatchingColor: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineDistancFade: {r: -12.29, g: 26.606895, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0.18823159, g: 0.18823159, b: 0.18823159, a: 0}

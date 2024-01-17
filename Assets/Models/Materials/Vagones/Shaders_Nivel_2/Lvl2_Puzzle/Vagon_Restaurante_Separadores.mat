@@ -236,7 +236,7 @@ Material:
     - _HalfToneColor: {r: 0.45098037, g: 0.45098037, b: 0.45098037, a: 1}
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingColor: {r: 0.084905684, g: 0.084905684, b: 0.084905684, a: 1}
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _OutlineDistancFade: {r: -12.29, g: 26.606895, b: 0, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0.18823162, g: 0.18823162, b: 0.18823162, a: 0}

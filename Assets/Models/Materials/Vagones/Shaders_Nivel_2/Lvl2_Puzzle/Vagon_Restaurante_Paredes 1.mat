@@ -8,24 +8,23 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Vagon_Restaurante_Paredes 1
-  m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
-  m_Parent: {fileID: 2100000, guid: c5733fc6044d0b646a61bdc3fad32718, type: 2}
+  m_Shader: {fileID: 4800000, guid: e88aeddd2ef1f934d805981244872e27, type: 3}
+  m_Parent: {fileID: 2100000, guid: 8d8121081261a25439fc5a0960258184, type: 2}
   m_ModifiedSerializedProperties: 16
   m_ValidKeywords:
-  - _ALPHATEST_ON
   - _HALFTONESHAPE_DOT
   - _OUTLINE
-  - _RECEIVE_SHADOWS_OFF
-  - _SPECULARHIGHLIGHTS_OFF
+  - _SPECULAR_COLOR
   - _TOON_SHADING_ON
   m_InvalidKeywords:
   - _ENABLEDHAIRSPEC_ON
+  - _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 2000
   stringTagMap:
-    RenderType: TransparentCutout
+    RenderType: Opaque
   disabledShaderPasses:
   - SRPDEFAULTUNLIT
   m_LockedProperties: 
@@ -125,5 +124,5 @@ Material:
     - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}
     - _RimColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0.772}
-    - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 0.015}
   m_BuildTextureStacks: []
