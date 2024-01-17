@@ -16,10 +16,10 @@ MonoBehaviour:
   sensY: 250
   camTimeOn: 10
   camTimeOff: 10
-  timer: 15
+  timer: 1.6362038
   usingCam: 0
   canJump: 0
-  canRun: 1
+  canRun: 0
   moveSpeed: 2
   sprintSpeed: 5
   crouchSpeed: 0.5
