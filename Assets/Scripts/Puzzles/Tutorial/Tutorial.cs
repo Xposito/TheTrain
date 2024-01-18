@@ -74,8 +74,15 @@ public class Tutorial : Evento
         else if (fotoElefante && !segundaCampana)
         {
             animator2.SetBool("NoAbre", true);
+            animator2.SetBool("NoAbre", false);
             elefante.SetActive(false) ;
             animator1.SetBool("AbrirPuerta", false);
+            
+            Rigidbody rigidbody = new Rigidbody();
+
+            rigidbody = campanaYes.GetComponent<Rigidbody>();
+            rigidbody.useGravity = true;
+            
             campanaInteractuable.SetActive(true);
             campanaHolder.SetActive(true);
             segundaCampana = true;
@@ -89,7 +96,7 @@ public class Tutorial : Evento
         }
         else if(campanaColocada && !terceraCampana)
         {
-            animator1.SetBool("AbrirPuerta", true);
+            animator2.SetBool("AbrirPuerta", true);
             cambioEscena.SetActive(true);
 
             Completar();
