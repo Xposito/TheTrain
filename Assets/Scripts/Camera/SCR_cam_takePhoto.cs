@@ -2,20 +2,21 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics.Tracing;
 using UnityEngine;
 using static UnityEditor.Experimental.GraphView.GraphView;
 using static UnityEditor.UIElements.ToolbarMenu;
 
 public class SCR_cam_takePhoto : MonoBehaviour
 {
-    [Header("Arrays")]
-    public GameObject[] puertas;
+    
+    
     
     public LayerMask layer;
     public SCR_scr_Player_Options playerOption;
 
     int elementos = 0;
-    int puertasInt = 0;
+    
     public Animator animator;
 
     [Header("UIPhoto")]
@@ -24,7 +25,12 @@ public class SCR_cam_takePhoto : MonoBehaviour
     [SerializeField] private Renderer[] renderCubo;
 
     public Tutorial tutorial;
+    SCR_Event_Level1 eventLevel1;
 
+    private void Start()
+    {
+        eventLevel1 = GameObject.FindGameObjectWithTag("Manager").GetComponent<SCR_Event_Level1>();
+    }
 
     void Update()
     {
@@ -65,7 +71,15 @@ public class SCR_cam_takePhoto : MonoBehaviour
                 Collider collider = hit.transform.GetComponent<Collider>();
                 collider.enabled = false;
                 flash.SetActive(false);
-                tutorial.CambioDeEstado();
+                if(tutorial != null)
+                {
+                    tutorial.CambioDeEstado();
+                }
+                else if(eventLevel1 != null)
+                {
+                    eventLevel1.CambioDeEstado();
+                }
+                
                 StartCoroutine(RecordFrame());
             }
         }

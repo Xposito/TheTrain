@@ -8,6 +8,7 @@ TagManager:
   - Bells
   - Puzzle2
   - PuzzleComida
+  - Manager
   layers:
   - Default
   - TransparentFX

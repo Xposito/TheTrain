@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class SCR_cam_parpadeo : StateMachineBehaviour
@@ -8,7 +9,7 @@ public class SCR_cam_parpadeo : StateMachineBehaviour
     
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        Transform.Destroy(animator.gameObject);
+        animator.gameObject.SetActive(false);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

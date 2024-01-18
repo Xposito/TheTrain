@@ -6,6 +6,8 @@ public class SCR_pla_ChangeObject : MonoBehaviour
 {
     public SCR_scr_Player_Options playerOptions;
     public GameObject camOverlay;
+    public GameObject animacionCamara;
+    public GameObject animacionManos;
     public Transform cam;
     public LayerMask layer;
 
@@ -28,8 +30,9 @@ public class SCR_pla_ChangeObject : MonoBehaviour
     {
         if (Input.GetKeyDown(playerOptions.camKey) && playerOptions.usingCam == false && camIsOff && playerOptions.timer >= playerOptions.camTimeOff)
         {
-            playerOptions.usingCam = true;
-            camOverlay.SetActive(true);
+            
+
+            StartCoroutine(SacarCamara());
             camIsOff = false;
             playerOptions.timer = playerOptions.camTimeOn;
         }
@@ -38,6 +41,9 @@ public class SCR_pla_ChangeObject : MonoBehaviour
         {
             playerOptions.usingCam = false;
             camOverlay.SetActive(false);
+            animacionCamara.SetActive(false);
+
+            StopCoroutine(SacarCamara());
             camIsOff = true;
         }
 
@@ -77,5 +83,17 @@ public class SCR_pla_ChangeObject : MonoBehaviour
                 item.canBeMoved = true;
             }
         }
+    }
+
+    IEnumerator SacarCamara()
+    {
+        animacionCamara.SetActive(true);
+        animacionManos.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        camOverlay.SetActive(true);
+        playerOptions.usingCam = true;
+
     }
 }
