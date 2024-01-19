@@ -14223,7 +14223,7 @@ RectTransform:
   - {fileID: 6496759908625554899}
   - {fileID: 8846365343156494091}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -14251,7 +14251,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &3366071912752623884
 MonoBehaviour:
@@ -14308,6 +14308,7 @@ MonoBehaviour:
   GameIsPaused: 0
   PauseMenuUI: {fileID: 602645499190732516}
   UI: {fileID: 0}
+  ControlsMenu: {fileID: 3372180449719696692}
 --- !u!1 &7191295870561861905
 GameObject:
   m_ObjectHideFlags: 0

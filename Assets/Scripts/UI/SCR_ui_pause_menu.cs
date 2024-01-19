@@ -8,7 +8,7 @@ public class SCR_ui_pause_menu : MonoBehaviour
     public bool GameIsPaused = false;
     public GameObject PauseMenuUI;
     public GameObject UI;
-
+    public GameObject ControlsMenu;
 
 
     public void Awake()
@@ -35,6 +35,7 @@ public class SCR_ui_pause_menu : MonoBehaviour
     public void Resume()
     {
         PauseMenuUI.SetActive(false);
+        ControlsMenu.SetActive(false);
         UI.SetActive(true);
         Time.timeScale = 1f;
         GameIsPaused = false;
