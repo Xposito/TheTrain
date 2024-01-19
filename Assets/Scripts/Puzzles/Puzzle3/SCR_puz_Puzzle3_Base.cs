@@ -22,7 +22,7 @@ public class SCR_puz_Puzzle3_Base : MonoBehaviour
                 item.col.isTrigger = true;
                 item.rb.isKinematic = true;
                 item.used = true;
-                item.mesh.enabled = false;
+                item.gameObject.SetActive(false);
             }
             else if(item.itemNumber != controller.counter && item.used == false)
             {
@@ -31,7 +31,7 @@ public class SCR_puz_Puzzle3_Base : MonoBehaviour
                 item.col.isTrigger = true;
                 item.rb.isKinematic = true;
                 item.used = true;
-                item.mesh.enabled = false;
+                item.gameObject.SetActive(false);
             }
         }
     }

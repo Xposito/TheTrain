@@ -17,7 +17,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
 
     int elementos = 0;
     
-    public Animator animator;
+    
 
     [Header("UIPhoto")]
     public GameObject flash;

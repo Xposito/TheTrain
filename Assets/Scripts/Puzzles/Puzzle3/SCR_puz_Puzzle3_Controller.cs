@@ -103,10 +103,10 @@ public class SCR_puz_Puzzle3_Controller : MonoBehaviour
         component4Scr.used = false;
 
         //Make components visible
-        component1Scr.mesh.enabled = true;
-        component2Scr.mesh.enabled = true;
-        component3Scr.mesh.enabled = true;
-        component4Scr.mesh.enabled = true;
+        component1Scr.gameObject.SetActive(true);
+        component2Scr.gameObject.SetActive(true);
+        component3Scr.gameObject.SetActive(true);
+        component4Scr.gameObject.SetActive(true);
 
         //Make food invisible
         food1.SetActive(false);

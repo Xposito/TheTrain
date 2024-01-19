@@ -1,0 +1,100 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2587138483156660304
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6073542135868092097}
+  - component: {fileID: 992411016573281148}
+  - component: {fileID: 3586349804368331787}
+  m_Layer: 0
+  m_Name: Puzzle3Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6073542135868092097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587138483156660304}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0, z: 7.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &992411016573281148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587138483156660304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9e6db80b3804484b977fd4aea98aea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  component1: {fileID: 0}
+  component2: {fileID: 0}
+  component3: {fileID: 0}
+  component4: {fileID: 0}
+  food1: {fileID: 0}
+  food2: {fileID: 0}
+  food3: {fileID: 0}
+  food4: {fileID: 0}
+  component1Transform: {fileID: 0}
+  component2Transform: {fileID: 0}
+  component3Transform: {fileID: 0}
+  component4Transform: {fileID: 0}
+  oneIsWrong: 0
+  puzzleComplete: 0
+  counter: 0
+--- !u!114 &3586349804368331787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587138483156660304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45fbf6becba6f6d4d9d9d0d940b0eddb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  positions:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  lights:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  trigger: {fileID: 0}
+  player: {fileID: 0}
+  playerInitialPosition: {fileID: 0}
+  position: 0
+  timer: 0
+  maxTimeForPlayer: 10
+  maxTimeForEnemy: 5
+  playerTurn: 0
+  playerDead: 0
+  playerWon: 0
+  rb: {fileID: 0}
