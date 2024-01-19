@@ -105,6 +105,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3564714357897148411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7700087539200147172}
+  m_Layer: 0
+  m_Name: ObjetosModulos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7700087539200147172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3564714357897148411}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1340867337732429467}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8338971145072137143
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,7 +257,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 89c6f7c231cdda44f8f47629e022d4ba,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 89c6f7c231cdda44f8f47629e022d4ba,
         type: 3}
@@ -311,7 +342,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 89c6f7c231cdda44f8f47629e022d4ba,
         type: 3}
       propertyPath: m_Name
-      value: PREF_env_VagonRestaurante Variant
+      value: PREF_env_VagonRestaurante
       objectReference: {fileID: 0}
     - target: {fileID: 1903155659704158165, guid: 89c6f7c231cdda44f8f47629e022d4ba,
         type: 3}
@@ -321,6 +352,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 89c6f7c231cdda44f8f47629e022d4ba,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7700087539200147172}
     - targetCorrespondingSourceObject: {fileID: -2043200129033870355, guid: 89c6f7c231cdda44f8f47629e022d4ba,
         type: 3}
       insertIndex: -1
@@ -1024,6 +1059,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3.8665822, y: 0.12853667, z: 6.580723}
   m_Center: {x: -1.933292, y: 0.06426871, z: 3.2903633}
+--- !u!4 &1340867337732429467 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 89c6f7c231cdda44f8f47629e022d4ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 1518010768049205616}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1349807627644021504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 552381597746190960, guid: 89c6f7c231cdda44f8f47629e022d4ba,
