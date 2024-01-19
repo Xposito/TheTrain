@@ -135,6 +135,6 @@ TextureImporter:
     nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  userData: '{"mode":0,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.4899977147579193},{"color":{"r":1.0,"g":1.0,"b":1.0,"a":1.0},"time":0.5000076293945313}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
+  userData: '{"mode":0,"colorKeys":[{"color":{"r":0.2641509175300598,"g":0.24271246790885926,"b":0.21555711328983308,"a":1.0},"time":0.43529412150382998},{"color":{"r":0.30188679695129397,"g":0.24390991032123567,"b":0.1666073352098465,"a":1.0},"time":0.4882429242134094},{"color":{"r":0.6226415038108826,"g":0.6226415038108826,"b":0.6226415038108826,"a":1.0},"time":0.5411764979362488}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}'
   assetBundleName: 
   assetBundleVariant: 
