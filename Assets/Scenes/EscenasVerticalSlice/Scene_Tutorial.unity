@@ -6758,6 +6758,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 8846365343156494091, guid: b21fc63be71faf343b0f61de89cc7286,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9337,8 +9342,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.1607702, y: 1.3506991, z: 0.6097927}
-  m_Center: {x: 0.0065265, y: 0.17535001, z: 0.19510365}
+  m_Size: {x: 1.1607702, y: 1.3506991, z: 0.78019905}
+  m_Center: {x: 0.00652647, y: 0.17535001, z: 0.109900475}
 --- !u!4 &1897435971
 Transform:
   m_ObjectHideFlags: 0
