@@ -26,6 +26,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
 
     public Tutorial tutorial;
     SCR_Event_Level1 eventLevel1;
+    
 
     private void Start()
     {
