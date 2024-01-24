@@ -3157,7 +3157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOptions: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
-  material1: {fileID: 2100000, guid: 0d274b5ca3225764793b083ff0b69c7c, type: 2}
+  material1: {fileID: 2100000, guid: b92ee8127e862654fafb672e74831fb1, type: 2}
   material2: {fileID: 2100000, guid: 845ef61c4c953e64ba0aceace6fad943, type: 2}
   meshRenderer: {fileID: 0}
 --- !u!114 &230254098
@@ -9977,7 +9977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerOptions: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
-  material1: {fileID: 2100000, guid: 0d274b5ca3225764793b083ff0b69c7c, type: 2}
+  material1: {fileID: 2100000, guid: 2d02aa997719ded4c921d3d2add01078, type: 2}
   material2: {fileID: 2100000, guid: 845ef61c4c953e64ba0aceace6fad943, type: 2}
   meshRenderer: {fileID: 0}
 --- !u!114 &784563939
@@ -10610,6 +10610,11 @@ PrefabInstance:
     - target: {fileID: 6157370675525862605, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 58a4e6b9aa95e8949b81458a61fee769, type: 2}
+    - target: {fileID: 7519789931120845622, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
+        type: 3}
+      propertyPath: material1
       value: 
       objectReference: {fileID: 2100000, guid: 58a4e6b9aa95e8949b81458a61fee769, type: 2}
     - target: {fileID: 8692632145191985158, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
