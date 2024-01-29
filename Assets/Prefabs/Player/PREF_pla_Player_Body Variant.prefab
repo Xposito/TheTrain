@@ -229,6 +229,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CameraObject
       objectReference: {fileID: 0}
+    - target: {fileID: 8844635101679505263, guid: 02fade84518c5c14182f5866fcbd31fa,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9201894155859008531, guid: 02fade84518c5c14182f5866fcbd31fa,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
@@ -245,6 +250,12 @@ PrefabInstance:
       addedObject: {fileID: 4469808049402479061}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02fade84518c5c14182f5866fcbd31fa, type: 3}
+--- !u!1 &5243524061486053527 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8844635101679505263, guid: 02fade84518c5c14182f5866fcbd31fa,
+    type: 3}
+  m_PrefabInstance: {fileID: 3637441311706462200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7214792111386304697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6222530660194621249, guid: 02fade84518c5c14182f5866fcbd31fa,
@@ -338,6 +349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MOD_pla_basemeshUVS
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e5b29ae8074a11d4589edcbd61818342,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -615,6 +631,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4455309665606456077}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &8659702085347621823 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5042063059540830386, guid: 1c8cf1978ecd42b449adaa59f34a4e21,
+    type: 3}
+  m_PrefabInstance: {fileID: 4455309665606456077}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7871626413536264741
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -636,17 +658,17 @@ PrefabInstance:
     - target: {fileID: 3901724377388025198, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.836
+      value: 15.739
       objectReference: {fileID: 0}
     - target: {fileID: 3901724377388025198, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.257
+      value: 1.029
       objectReference: {fileID: 0}
     - target: {fileID: 3901724377388025198, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.9882665
+      value: 32.91965
       objectReference: {fileID: 0}
     - target: {fileID: 3901724377388025198, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
         type: 3}
@@ -682,6 +704,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6297606752645084793, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
+        type: 3}
+      propertyPath: animacionManos
+      value: 
+      objectReference: {fileID: 3840482041810475887}
+    - target: {fileID: 6297606752645084793, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
+        type: 3}
+      propertyPath: animacionCamara
+      value: 
+      objectReference: {fileID: 5243524061486053527}
+    - target: {fileID: 8337223712601063271, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
+        type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -728,7 +765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b802b265aafb2ed4c8df6269d02a10e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  album: {fileID: 0}
+  album: {fileID: 8659702085347621823}
 --- !u!4 &8186811653709203872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2062867804624046981, guid: 89a5d4744e6e19b4f8d68564a2bc87ae,
@@ -757,7 +794,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   playerOption: {fileID: 11400000, guid: 0e1410c337929c3428e19deb6629042a, type: 2}
-  animator: {fileID: 0}
   flash: {fileID: 0}
   overlay: {fileID: 0}
   renderCubo:
