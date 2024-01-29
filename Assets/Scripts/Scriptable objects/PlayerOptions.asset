@@ -45,3 +45,4 @@ MonoBehaviour:
   camKey: 101
   onLadderKey: 103
   offLadderKey: 306
+  volume: 0

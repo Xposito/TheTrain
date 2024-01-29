@@ -63,4 +63,6 @@ public class SCR_scr_Player_Options : ScriptableObject
     public KeyCode onLadderKey; //Tecla para subir a una escalera
     public KeyCode offLadderKey; //Tecla para bajar de una escalera
     #endregion
+
+    public float volume;
 }
