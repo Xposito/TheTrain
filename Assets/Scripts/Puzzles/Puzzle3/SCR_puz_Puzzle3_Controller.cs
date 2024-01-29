@@ -35,6 +35,8 @@ public class SCR_puz_Puzzle3_Controller : MonoBehaviour
     private SCR_puz_Puzzle3_Item component3Scr;
     private SCR_puz_Puzzle3_Item component4Scr;
 
+    public SCR_pla_Pick_Objects pickObjects;
+
 
     void Start()
     {
@@ -48,6 +50,8 @@ public class SCR_puz_Puzzle3_Controller : MonoBehaviour
         food2.SetActive(false);
         food3.SetActive(false);
         food4.SetActive(false);
+
+        pickObjects = GameObject.Find("CameraHolder").GetComponentInChildren<SCR_pla_Pick_Objects>();
 
         counter = 0;
     }
@@ -118,6 +122,7 @@ public class SCR_puz_Puzzle3_Controller : MonoBehaviour
         puzzleComplete = false;
         counter = 0;
 
+        pickObjects.DropObject();
         Debug.Log("Lo has hecho mal");
     }
     #endregion

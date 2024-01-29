@@ -79,7 +79,7 @@ public class SCR_pla_Pick_Objects : MonoBehaviour
         }
     }
 
-    void DropObject()
+    public void DropObject()
     {
         heldObjRB.useGravity = true;
         heldObjRB.drag = 1;
