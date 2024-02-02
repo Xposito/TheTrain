@@ -36,6 +36,7 @@ public class SCR_puz_Puzzle3_Controller : MonoBehaviour
     private SCR_puz_Puzzle3_Item component4Scr;
 
     public SCR_pla_Pick_Objects pickObjects;
+    public SCR_event_Lvl2 event_Lvl2;
 
 
     void Start()
@@ -69,6 +70,7 @@ public class SCR_puz_Puzzle3_Controller : MonoBehaviour
         if (counter == 4 && !oneIsWrong)
         {
             puzzleComplete = true;
+            event_Lvl2.CambioDeEstado();
             Debug.Log("Has ganado :)");
         }
 

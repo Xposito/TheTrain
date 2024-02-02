@@ -9,6 +9,7 @@ TagManager:
   - Puzzle2
   - PuzzleComida
   - Manager
+  - Puertas
   layers:
   - Default
   - TransparentFX

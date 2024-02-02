@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class SCR_event_Lvl2 : Evento
 {
-    GameObject objetosPuzzle;
-    GameObject objetosModulos;
-    GameObject modulos;
+    public GameObject objetosPuzzle;
+    public GameObject objetosModulos;
+    public GameObject modulos;
+    public GameObject animacionBow;
+    public GameObject vagon;
+    
+
+    public GameObject controladorPuzles;
 
     bool estado_1;
     bool estado_2 = false;
@@ -20,7 +25,8 @@ public class SCR_event_Lvl2 : Evento
     {
         objetosPuzzle.SetActive(false);
         modulos.SetActive(false);
-        objetosModulos.SetActive(true);   
+        objetosModulos.SetActive(true);
+        controladorPuzles.GetComponent<SCR_puz_Puzzle3_Controller_2>().enabled = false;
     }
 
     public SCR_event_Lvl2()
@@ -54,15 +60,29 @@ public class SCR_event_Lvl2 : Evento
        
         if (estado_1 && !estado_2)
         {
-            objetosPuzzle.SetActive(true) ;
+
+            objetosPuzzle.SetActive(true);            
             estado_2 = true;
         }
         else if (estado_2 && !estado_3)
         {
-            objetosPuzzle.SetActive(false);
-            objetosModulos.SetActive(false);
-            modulos.SetActive(true );
+            controladorPuzles.GetComponent<SCR_puz_Puzzle3_Controller>().enabled = false;
+            animacionBow.SetActive(true);
+
+            StartCoroutine(EsperaAnimación());
+            estado_3 = true;
+           
+
         }
+        else if (estado_3)
+        {
+            Debug.Log("Se acabo");
+            modulos.SetActive(false);
+            objetosModulos.SetActive(true);
+            vagon.transform.position = new Vector3(15.84f, 0, 39.83f);
+
+        }
+
 
 
     }
@@ -88,5 +108,16 @@ public class SCR_event_Lvl2 : Evento
         // Luego, se llama al controlador de eventos para indicar que esta misión se ha completado
         GameObject.FindGameObjectWithTag("GameController").GetComponent<ControladorEventos>().CompletarEvento(this);
 
+    }
+
+
+    IEnumerator EsperaAnimación()
+    {
+        yield return new WaitForSeconds(8.2f);
+
+        animacionBow.SetActive(false);
+        modulos.SetActive(true);
+        objetosModulos.SetActive(false);
+        controladorPuzles.GetComponent<SCR_puz_Puzzle3_Controller_2>().enabled = true;
     }
 }

@@ -26,6 +26,9 @@ public class SCR_puz_Puzzle3_Controller_2 : MonoBehaviour
 
     public Rigidbody rb;
 
+    [Header(" ")]
+    public SCR_event_Lvl2 event_Lvl2;
+
 
     private void Start()
     {
@@ -122,6 +125,7 @@ public class SCR_puz_Puzzle3_Controller_2 : MonoBehaviour
 
     public void Win()
     {
+        event_Lvl2.CambioDeEstado();
         Debug.Log("You won :)");
         playerWon = true;
     }
