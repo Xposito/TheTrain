@@ -24,6 +24,9 @@ public class SCR_cam_takePhoto : MonoBehaviour
     public GameObject overlay;
     [SerializeField] private Renderer[] renderCubo;
 
+    public SCR_scr_Elephants elephants;
+    
+
     public Tutorial tutorial;
     SCR_Event_Level1 eventLevel1;
     SCR_event_Lvl2 eventLevel2;
@@ -76,14 +79,30 @@ public class SCR_cam_takePhoto : MonoBehaviour
                 flash.SetActive(false);
                 if(tutorial != null)
                 {
+                    if(hit.collider.tag == "elephant")
+                    {
+                        elephants.elephant1 = true;
+                        elephants.elephantNumber++;
+                    }
+
                     tutorial.CambioDeEstado();
                 }
                 else if(eventLevel1 != null)
                 {
+                    if (hit.collider.tag == "elephant")
+                    {
+                        elephants.elephant2 = true;
+                        elephants.elephantNumber++;
+                    }
                     eventLevel1.CambioDeEstado();
                 }
                 else if(eventLevel2 != null)
                 {
+                    if (hit.collider.tag == "elephant")
+                    {
+                        elephants.elephant3 = true;
+                        elephants.elephantNumber++;
+                    }
                     eventLevel2.CambioDeEstado();
                 }
                 
