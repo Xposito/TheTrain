@@ -123,6 +123,30 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &682482581 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7123338119653714879, guid: 21e587370fed5d6499477e7227d0693d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916880103381928294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1028490822 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 89387726934379851, guid: 21e587370fed5d6499477e7227d0693d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916880103381928294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1150140136
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +284,35 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
+--- !u!1 &1181178913 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1684368896574403338, guid: 21e587370fed5d6499477e7227d0693d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916880103381928294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1181178914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1181178913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c53762bee3fdd9a46b8063026cd9eebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  elephantsSO: {fileID: 11400000, guid: 880885f1b601e8a438166dbcc1ca1c9e, type: 2}
+  elephant1base: {fileID: 682482581}
+  elephant2base: {fileID: 1841339105}
+  elephant3base: {fileID: 1770575268}
+  elephant1white: {fileID: 21300000, guid: acb9aaa28b210c147a4ffc52e04b7c7b, type: 3}
+  elephant2white: {fileID: 21300000, guid: 569d05f9b60e86c45b7953536be860df, type: 3}
+  elephant3white: {fileID: 21300000, guid: 544bba2c72fdae04fade3af73f4c3be2, type: 3}
+  elephant1img: {fileID: 21300000, guid: 12dc907e1fb415e4c910797b7366123b, type: 3}
+  elephant2img: {fileID: 21300000, guid: 8b9c506deb8585c4fb578363cd930256, type: 3}
+  elephant3img: {fileID: 21300000, guid: ac3ee1ac80889dc49b0f6b9c2ec4f42e, type: 3}
+  elephantText: {fileID: 1028490822}
 --- !u!1 &1299222095
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +499,30 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1770575268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1802123981208691730, guid: 21e587370fed5d6499477e7227d0693d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916880103381928294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1841339105 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5861548418055185932, guid: 21e587370fed5d6499477e7227d0693d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8916880103381928294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1856333402
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -648,6 +725,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 915101967475938358, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      propertyPath: m_Name
+      value: Elephant3
+      objectReference: {fileID: 0}
     - target: {fileID: 1216942215229434319, guid: 21e587370fed5d6499477e7227d0693d,
         type: 3}
       propertyPath: m_Camera
@@ -657,6 +739,33 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Elephants_SCREEN
+      objectReference: {fileID: 0}
+    - target: {fileID: 1803844435756472419, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      propertyPath: m_Name
+      value: Elephant2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2654256139496327421, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5861548418055185932, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 569d05f9b60e86c45b7953536be860df,
+        type: 3}
+    - target: {fileID: 7123338119653714879, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: acb9aaa28b210c147a4ffc52e04b7c7b,
+        type: 3}
+    - target: {fileID: 7689864365234517480, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      propertyPath: m_Name
+      value: Elephant1
       objectReference: {fileID: 0}
     - target: {fileID: 8556754710114472529, guid: 21e587370fed5d6499477e7227d0693d,
         type: 3}
@@ -766,5 +875,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1684368896574403338, guid: 21e587370fed5d6499477e7227d0693d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1181178914}
   m_SourcePrefab: {fileID: 100100000, guid: 21e587370fed5d6499477e7227d0693d, type: 3}
