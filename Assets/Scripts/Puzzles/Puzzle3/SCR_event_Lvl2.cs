@@ -9,6 +9,8 @@ public class SCR_event_Lvl2 : Evento
     public GameObject modulos;
     public GameObject animacionBow;
     public GameObject vagon;
+    public GameObject camaraObjeto;
+    public GameObject cartel;
     
 
     public GameObject controladorPuzles;
@@ -16,9 +18,12 @@ public class SCR_event_Lvl2 : Evento
     bool estado_1;
     bool estado_2 = false;
     bool estado_3 = false;
+    bool estado_4 = false;
     int objetosColocados = 0;
 
     public Animator animator, animatorMirror;
+
+    public SCR_cam_takePhoto takePhoto;
 
 
     private void Start()
@@ -60,7 +65,7 @@ public class SCR_event_Lvl2 : Evento
        
         if (estado_1 && !estado_2)
         {
-
+            animator.SetBool("AbrirPuerta", true);
             objetosPuzzle.SetActive(true);            
             estado_2 = true;
         }
@@ -68,19 +73,27 @@ public class SCR_event_Lvl2 : Evento
         {
             controladorPuzles.GetComponent<SCR_puz_Puzzle3_Controller>().enabled = false;
             animacionBow.SetActive(true);
+            takePhoto.enabled = false;
 
             StartCoroutine(EsperaAnimación());
             estado_3 = true;
            
 
         }
-        else if (estado_3)
+        else if (estado_3 && !estado_4)
         {
             Debug.Log("Se acabo");
             modulos.SetActive(false);
             objetosModulos.SetActive(true);
-            vagon.transform.position = new Vector3(15.84f, 0, 39.83f);
+            vagon.transform.position = new Vector3(15.84f, 0, 39.78f);
+            takePhoto.enabled = true;
+            camaraObjeto.SetActive(false);
+            cartel.SetActive(true);
 
+        }
+        else if (estado_4)
+        {
+            animatorMirror.SetBool("AbrirPuerta", true);
         }
 
 

@@ -26,11 +26,13 @@ public class SCR_cam_takePhoto : MonoBehaviour
 
     public Tutorial tutorial;
     SCR_Event_Level1 eventLevel1;
+    SCR_event_Lvl2 eventLevel2;
     
 
     private void Start()
     {
         eventLevel1 = GameObject.FindGameObjectWithTag("Manager").GetComponent<SCR_Event_Level1>();
+        eventLevel2 = GameObject.FindGameObjectWithTag("Manager").GetComponent<SCR_event_Lvl2>();
     }
 
     void Update()
@@ -79,6 +81,10 @@ public class SCR_cam_takePhoto : MonoBehaviour
                 else if(eventLevel1 != null)
                 {
                     eventLevel1.CambioDeEstado();
+                }
+                else if(eventLevel2 != null)
+                {
+                    eventLevel2.CambioDeEstado();
                 }
                 
                 StartCoroutine(RecordFrame());
