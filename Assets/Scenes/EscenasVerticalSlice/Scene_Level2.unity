@@ -31872,6 +31872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MOD_env_figurita_3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 34dd4e90137715e4fb8a02a87e10a89e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7168621494865892215, guid: 34dd4e90137715e4fb8a02a87e10a89e,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
