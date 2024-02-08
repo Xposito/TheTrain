@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: auriculares
+  m_Name: Huevera
   m_Shader: {fileID: 4800000, guid: 933f24cde1e3f6a41818f56d729421ab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -164,7 +164,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DiffuseStep: -0.015
+    - _DiffuseStep: 0.01
     - _DitherTexelSize: 1
     - _DitherThreshold: 1
     - _DotSize: 0.7
@@ -246,9 +246,9 @@ Material:
     - _RemapOutputMax: 0.95
     - _RemapOutputMin: -2
     - _RimEnabled: 1
-    - _RimLightAlign: 0.17
-    - _RimLightSmoothness: 0.886
-    - _RimPower: 0.89
+    - _RimLightAlign: 0.145
+    - _RimLightSmoothness: 0.583
+    - _RimPower: 0.74
     - _SSOutlineDepthThredshold: 1
     - _SSOutlineNdotVThredshold: 0.2
     - _SSOutlineNormalThredshold: 0.305
@@ -293,7 +293,7 @@ Material:
     - _ZWrite: 1
     - _brushScale: 8
     m_Colors:
-    - _BaseColor: {r: 0.6791267, g: 0.43075827, b: 0.754717, a: 1}
+    - _BaseColor: {r: 0.7075472, g: 0.5230591, b: 0.37046102, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorDim: {r: 0.5660378, g: 0.258989, b: 0.258989, a: 1}
     - _ColorDimCurve: {r: 0.85023, g: 0.85034, b: 0.85045, a: 0.85056}
@@ -313,9 +313,9 @@ Material:
     - _HatchColor: {r: 0, g: 0, b: 0, a: 1}
     - _HatchingColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightmapDirection: {r: 0, g: 1, b: 0, a: 0}
-    - _OutlineColor: {r: 0.78409576, g: 0, b: 1, a: 1}
+    - _OutlineColor: {r: 1, g: 0.68167466, b: 0, a: 1}
     - _OutlineDistancFade: {r: -50, g: 50, b: 0, a: 0}
-    - _RimColor: {r: 0.5441041, g: 0, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 0.4890508, b: 0, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _SpherizeNormalOrigin: {r: 0, g: 0, b: 0, a: 1}
