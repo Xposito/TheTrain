@@ -7,6 +7,9 @@ public class SCR_Event_Level1 : Evento
 
     GameObject[] carteles;
 
+    public AudioSource puerta1;
+    public AudioSource puerta2;
+
     bool estado_1;
     bool estado_2 = false;
     int objetosColocados = 0;
@@ -70,9 +73,11 @@ public class SCR_Event_Level1 : Evento
         {
             animator.SetBool("Level1", true);
             animatorMirror.SetBool("Level1Mirror", true) ;
+            puerta1.Play();
+            puerta2.Play();
 
 
-            
+
         }
     }
 

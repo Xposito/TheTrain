@@ -25,6 +25,12 @@ public class SCR_event_Lvl2 : Evento
 
     public SCR_cam_takePhoto takePhoto;
 
+    [Header("Sonidos")]
+    public AudioSource doorSource;
+
+    public AudioClip doorCloseSound;
+    public AudioClip dooropenSound;
+
 
     private void Start()
     {
@@ -66,6 +72,8 @@ public class SCR_event_Lvl2 : Evento
         if (estado_1 && !estado_2)
         {
             animator.SetBool("AbrirPuerta", true);
+            doorSource.clip = doorCloseSound;
+            doorSource.Play();
             objetosPuzzle.SetActive(true);            
             estado_2 = true;
         }
@@ -94,6 +102,8 @@ public class SCR_event_Lvl2 : Evento
         else if (estado_4)
         {
             animatorMirror.SetBool("AbrirPuerta", true);
+            doorSource.clip = dooropenSound;
+            doorSource.Play();
         }
 
 

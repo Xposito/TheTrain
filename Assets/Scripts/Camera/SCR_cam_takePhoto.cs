@@ -16,8 +16,8 @@ public class SCR_cam_takePhoto : MonoBehaviour
     public SCR_scr_Player_Options playerOption;
 
     int elementos = 0;
-    
-    
+
+    public AudioSource audioSource;
 
     [Header("UIPhoto")]
     public GameObject flash;
@@ -59,7 +59,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
         yield return new WaitForEndOfFrame();
         overlay.SetActive(true);
         flash.SetActive(true);
-
+        audioSource.Play();
         renderCubo[elementos].material.mainTexture = texture;
   
         elementos++;
@@ -83,6 +83,7 @@ public class SCR_cam_takePhoto : MonoBehaviour
                     {
                         elephants.elephant1 = true;
                         elephants.elephantNumber++;
+                        audioSource.Play();
                     }
 
                     tutorial.CambioDeEstado();

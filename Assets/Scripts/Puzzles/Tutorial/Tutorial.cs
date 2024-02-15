@@ -28,7 +28,16 @@ public class Tutorial : Evento
 
     [Header("TrigeerFinal")]
     public GameObject cambioEscena;
-    
+
+    [Header("Audio sources")]
+    public AudioSource doorAudioSource1;
+    public AudioSource doorAudioSource2;
+    public AudioSource cartelAudioSource;
+
+    [Header("Sonidos")]
+    public AudioClip doorSound;
+    public AudioClip cartelSound;
+
 
     public Tutorial()
     {
@@ -62,6 +71,8 @@ public class Tutorial : Evento
         {
             elefante.SetActive(true);
             animator1.SetBool("AbrirPuerta", true);
+            doorAudioSource1.clip = doorSound;
+            doorAudioSource1.Play();
             primeraCampana = true;
 
         }
@@ -75,6 +86,7 @@ public class Tutorial : Evento
         {
             animator2.SetBool("NoAbre", true);
             animator2.SetBool("NoAbre", false);
+            
             elefante.SetActive(false) ;
             animator1.SetBool("AbrirPuerta", false);
             
@@ -82,7 +94,9 @@ public class Tutorial : Evento
 
             rigidbody = campanaYes.GetComponent<Rigidbody>();
             rigidbody.useGravity = true;
-            
+            cartelAudioSource.clip = cartelSound;
+            cartelAudioSource.Play();
+
             campanaInteractuable.SetActive(true);
             campanaHolder.SetActive(true);
             segundaCampana = true;
@@ -98,7 +112,8 @@ public class Tutorial : Evento
         {
             animator2.SetBool("AbrirPuerta", true);
             cambioEscena.SetActive(true);
-
+            doorAudioSource2.clip = doorSound;
+            doorAudioSource2.Play();
             Completar();
         }
     }
