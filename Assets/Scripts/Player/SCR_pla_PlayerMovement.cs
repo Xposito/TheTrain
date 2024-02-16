@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
-using UnityEditor.Timeline.Actions;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 public class SCR_pla_PlayerMovement : MonoBehaviour
 {

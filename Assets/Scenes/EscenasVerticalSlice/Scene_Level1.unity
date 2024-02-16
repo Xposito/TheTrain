@@ -920,6 +920,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 2c6f3c564d1816a43a1db82fd8ecd6f4,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2c6f3c564d1816a43a1db82fd8ecd6f4,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 643e220cdf6aafe4296bf840d0268c02, type: 2}
@@ -7530,6 +7535,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1045898615}
     m_Modifications:
+    - target: {fileID: 82818299212318516, guid: 56c927d333abbd94fa88fd4ba839c0b8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 82818299212318516, guid: 56c927d333abbd94fa88fd4ba839c0b8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -14797,6 +14807,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1252062668080851088, guid: 57cd5047b0e6e0c4d93b451c21167cc6,
+        type: 3}
+      propertyPath: m_VideoClip
+      value: 
+      objectReference: {fileID: 32900000, guid: 18bb5ae84612f9540a99f33528ec4cb5,
+        type: 3}
     - target: {fileID: 5673150078024374887, guid: 57cd5047b0e6e0c4d93b451c21167cc6,
         type: 3}
       propertyPath: m_Name
@@ -20051,6 +20067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6157370675525862605, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157370675525862605, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 643e220cdf6aafe4296bf840d0268c02, type: 2}
@@ -25034,6 +25055,11 @@ PrefabInstance:
     - target: {fileID: 2462214607961703509, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6157370675525862605, guid: 43f45e7f80aa04c4c8eb332a801f1f84,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6157370675525862605, guid: 43f45e7f80aa04c4c8eb332a801f1f84,

@@ -4,8 +4,6 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Tracing;
 using UnityEngine;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEditor.UIElements.ToolbarMenu;
 
 public class SCR_cam_takePhoto : MonoBehaviour
 {
