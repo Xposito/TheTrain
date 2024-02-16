@@ -6,6 +6,8 @@ public class SCR_Event_Level1 : Evento
 {
 
     GameObject[] carteles;
+    public GameObject elephant;
+
 
     public AudioSource puerta1;
     public AudioSource puerta2;
@@ -71,6 +73,7 @@ public class SCR_Event_Level1 : Evento
         }
         else if (estado_2)
         {
+            elephant.SetActive(true);
             animator.SetBool("Level1", true);
             animatorMirror.SetBool("Level1Mirror", true) ;
             puerta1.Play();
