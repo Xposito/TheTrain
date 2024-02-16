@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
+
 
 public class SCR_pla_Options : MonoBehaviour
 {
-
+    public AudioMixer mixer;
     public SCR_scr_Player_Options playerOptions;
     public Slider slider;
     public Slider volumeSlider;
@@ -40,8 +42,13 @@ public class SCR_pla_Options : MonoBehaviour
     public void ChangeVol()
     {
         playerOptions.volume = volumeSlider.value;
-        AudioListener.volume = playerOptions.volume;
+        
         volText.text = volumeSlider.value.ToString();
+    }
+
+    public void SetSound(float soundLevel)
+    {
+        mixer.SetFloat("musicVol", soundLevel);
     }
 
     public void ChangeFullScreen(bool fullscreen)
